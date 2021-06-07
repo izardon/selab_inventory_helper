@@ -124,7 +124,7 @@ struct InventoryEdit: View {
             Spacer()
             
             Button(action: {
-                print("Share tapped!")
+                print("Save!")
             }) {
                 HStack {
                     Text("儲存")

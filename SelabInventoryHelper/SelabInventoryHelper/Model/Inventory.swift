@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Inventory {
     var identify = ""
@@ -14,6 +15,7 @@ class Inventory {
     var description: String = ""
     var createdDate: Date = Date()
     var isScrap: Bool = false
+    var images = [Image("testImg"), Image("testImg2")]
     
     init(identify: String, name: String, location: String, description: String) {
         self.identify = identify

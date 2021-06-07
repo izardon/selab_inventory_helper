@@ -13,9 +13,7 @@ struct InventoryDetail: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var imgIndex = 0
     @State var isEditing = false
-    
-    var images = ["testImg", "testImg2"]
-    
+        
     var btnBack : some View { Button(action: {
         self.presentationMode.wrappedValue.dismiss()
     }) {
@@ -60,9 +58,9 @@ struct InventoryDetail: View {
             Spacer()
             
             HStack {
-                ImageSlider(index: $imgIndex.animation(), maxIndex: images.count - 1) {
-                    ForEach(self.images, id: \.self) { imageName in
-                        Image(imageName)
+                ImageSlider(index: $imgIndex.animation(), maxIndex: inventory.images.count - 1) {
+                    ForEach(0..<inventory.images.count) { idx in
+                        inventory.images[idx]
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                     }

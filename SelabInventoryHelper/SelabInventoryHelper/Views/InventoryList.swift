@@ -12,6 +12,7 @@ struct InventoryList: View {
     @State private var isEditing = false
     @State private var selection = 2
     @State private var searchText: String = ""
+    @State private var showingAlert = false
     
     let inventories = [Inventory(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡"), Inventory(identify: "B647", name: "手機", location: "宏裕科技大樓1624", description: "samsung")]
     
@@ -44,11 +45,41 @@ struct InventoryList: View {
                                         .resizable()
                                         .frame(width: 30, height: 30)
                                         .foregroundColor(.blue)
+                                        .onTapGesture {
+                                            print("archivebox")
+                                            showingAlert = true
+                                        }
+                                        .alert(isPresented: $showingAlert) {
+                                            Alert(
+                                                title: Text("確定要報廢這筆財產？"),
+                                                message: Text("可再取消報廢"),
+                                                primaryButton: .destructive(Text("報廢")) {
+                                                    print("Archivebox...")
+                                                },
+                                                secondaryButton: .cancel(Text("取消"))
+                                            )
+                                        }
+                                    
                                     Spacer()
                                     Image(systemName: "trash")
                                         .resizable()
                                         .frame(width: 30, height: 30)
                                         .foregroundColor(.red)
+                                        .onTapGesture {
+                                            print("trash")
+                                            showingAlert = true
+                                        }
+                                        .alert(isPresented: $showingAlert) {
+                                            Alert(
+                                                title: Text("確定要刪除這筆財產？"),
+                                                message: Text("無法還原"),
+                                                primaryButton: .destructive(Text("刪除")) {
+                                                    print("Deleting...")
+                                                },
+                                                secondaryButton: .cancel(Text("取消"))
+                                            )
+                                        }
+                                    
                                     Spacer()
                                 }
                             }
