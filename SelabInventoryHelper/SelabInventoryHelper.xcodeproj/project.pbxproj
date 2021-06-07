@@ -13,7 +13,10 @@
 		CC58CF6A266B8101001D49CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC58CF69266B8101001D49CC /* Preview Assets.xcassets */; };
 		CC58CF75266B8101001D49CC /* SelabInventoryHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF74266B8101001D49CC /* SelabInventoryHelperTests.swift */; };
 		CC58CF80266B8101001D49CC /* SelabInventoryHelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF7F266B8101001D49CC /* SelabInventoryHelperUITests.swift */; };
-		CC58CF8F266D0509001D49CC /* PropertyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF8E266D0509001D49CC /* PropertyListView.swift */; };
+		CC58CF8F266D0509001D49CC /* InventoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF8E266D0509001D49CC /* InventoryList.swift */; };
+		CC58CF92266E035D001D49CC /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF91266E035C001D49CC /* SearchBar.swift */; };
+		CC58CF97266E1B75001D49CC /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF96266E1B75001D49CC /* Inventory.swift */; };
+		CC58CF99266E1DD7001D49CC /* InventoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF98266E1DD7001D49CC /* InventoryDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +49,10 @@
 		CC58CF7B266B8101001D49CC /* SelabInventoryHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelabInventoryHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC58CF7F266B8101001D49CC /* SelabInventoryHelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelabInventoryHelperUITests.swift; sourceTree = "<group>"; };
 		CC58CF81266B8101001D49CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC58CF8E266D0509001D49CC /* PropertyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListView.swift; sourceTree = "<group>"; };
+		CC58CF8E266D0509001D49CC /* InventoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryList.swift; sourceTree = "<group>"; };
+		CC58CF91266E035C001D49CC /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CC58CF96266E1B75001D49CC /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		CC58CF98266E1DD7001D49CC /* InventoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		CC58CF61266B8100001D49CC /* SelabInventoryHelper */ = {
 			isa = PBXGroup;
 			children = (
+				CC58CF93266E1B27001D49CC /* Model */,
 				CC58CF8D266D045A001D49CC /* Views */,
 				CC58CF62266B8100001D49CC /* SelabInventoryHelperApp.swift */,
 				CC58CF64266B8100001D49CC /* ContentView.swift */,
@@ -136,9 +143,19 @@
 		CC58CF8D266D045A001D49CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CC58CF8E266D0509001D49CC /* PropertyListView.swift */,
+				CC58CF8E266D0509001D49CC /* InventoryList.swift */,
+				CC58CF91266E035C001D49CC /* SearchBar.swift */,
+				CC58CF98266E1DD7001D49CC /* InventoryDetail.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CC58CF93266E1B27001D49CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC58CF96266E1B75001D49CC /* Inventory.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC58CF97266E1B75001D49CC /* Inventory.swift in Sources */,
 				CC58CF65266B8100001D49CC /* ContentView.swift in Sources */,
-				CC58CF8F266D0509001D49CC /* PropertyListView.swift in Sources */,
+				CC58CF92266E035D001D49CC /* SearchBar.swift in Sources */,
+				CC58CF99266E1DD7001D49CC /* InventoryDetail.swift in Sources */,
+				CC58CF8F266D0509001D49CC /* InventoryList.swift in Sources */,
 				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
