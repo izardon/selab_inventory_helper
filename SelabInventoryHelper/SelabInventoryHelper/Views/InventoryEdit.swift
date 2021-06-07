@@ -109,6 +109,7 @@ struct InventoryEdit: View {
                         self.shouldPresentCamera = false
                     }), ActionSheet.Button.cancel()])
                 }
+                
             }
             .frame(
                 minWidth: 0,
