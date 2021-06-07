@@ -43,10 +43,12 @@ struct InventoryList: View {
                                     Image(systemName: "archivebox")
                                         .resizable()
                                         .frame(width: 30, height: 30)
+                                        .foregroundColor(.blue)
                                     Spacer()
                                     Image(systemName: "trash")
                                         .resizable()
                                         .frame(width: 30, height: 30)
+                                        .foregroundColor(.red)
                                     Spacer()
                                 }
                             }
@@ -58,7 +60,6 @@ struct InventoryList: View {
                 .navigationBarHidden(true)
             }
         }
-        .padding(.trailing,-32.0)
     }
 }
 

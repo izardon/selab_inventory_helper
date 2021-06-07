@@ -12,6 +12,8 @@ struct InventoryDetail: View {
     let inventory: Inventory
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var imgIndex = 0
+    @State var isEditing = false
+    
     var images = ["testImg", "testImg2"]
     
     var btnBack : some View { Button(action: {
@@ -23,6 +25,12 @@ struct InventoryDetail: View {
     }
     }
     
+    var btnEdit : some View {
+        NavigationLink(destination: InventoryEdit(inventory: inventory), label: {
+            Text("Edit")
+        })
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -30,24 +38,24 @@ struct InventoryDetail: View {
                     .font(.largeTitle)
                 Spacer()
             }
-            .padding(EdgeInsets(top: 10, leading: 10, bottom: 5, trailing: 0))
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 5, trailing: 10))
             
             Text("新增時間：\(inventory.getCreatedDate())")
                 .font(.body)
                 .foregroundColor(Color.gray)
-                .padding(EdgeInsets(top: 0, leading: 10, bottom: 5, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 5, trailing: 10))
             
             Text("財產名稱：\(inventory.name)")
                 .font(.title2)
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
             
             Text("存放地點：\(inventory.location)")
                 .font(.title2)
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
             
             Text("財產描述：\(inventory.description)")
                 .font(.title2)
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
+                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
             
             Spacer()
             
@@ -59,13 +67,11 @@ struct InventoryDetail: View {
                             .aspectRatio(contentMode: .fit)
                     }
                 }
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 50))
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                 .aspectRatio(4/3, contentMode: .fit)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .shadow(radius: 5)
             }
-            
-            
             
             Spacer()
         }
@@ -78,6 +84,6 @@ struct InventoryDetail: View {
         )
         .navigationTitle(inventory.identify)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(leading: btnBack)
+        .navigationBarItems(leading: btnBack, trailing: btnEdit)
     }
 }

@@ -18,6 +18,8 @@
 		CC58CF99266E1DD7001D49CC /* InventoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF98266E1DD7001D49CC /* InventoryDetail.swift */; };
 		CC58CF9B266E2982001D49CC /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF9A266E2982001D49CC /* SearchBar.swift */; };
 		CC58CFA0266E50DB001D49CC /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF9F266E50DB001D49CC /* ImageSlider.swift */; };
+		CC58CFA2266E5A55001D49CC /* InventoryEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFA1266E5A55001D49CC /* InventoryEdit.swift */; };
+		CC58CFA4266E7130001D49CC /* SUImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFA3266E7130001D49CC /* SUImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		CC58CF98266E1DD7001D49CC /* InventoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryDetail.swift; sourceTree = "<group>"; };
 		CC58CF9A266E2982001D49CC /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CC58CF9F266E50DB001D49CC /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
+		CC58CFA1266E5A55001D49CC /* InventoryEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryEdit.swift; sourceTree = "<group>"; };
+		CC58CFA3266E7130001D49CC /* SUImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 				CC58CF98266E1DD7001D49CC /* InventoryDetail.swift */,
 				CC58CF9A266E2982001D49CC /* SearchBar.swift */,
 				CC58CF9F266E50DB001D49CC /* ImageSlider.swift */,
+				CC58CFA1266E5A55001D49CC /* InventoryEdit.swift */,
+				CC58CFA3266E7130001D49CC /* SUImagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 			files = (
 				CC58CF97266E1B75001D49CC /* Inventory.swift in Sources */,
 				CC58CFA0266E50DB001D49CC /* ImageSlider.swift in Sources */,
+				CC58CFA4266E7130001D49CC /* SUImagePicker.swift in Sources */,
+				CC58CFA2266E5A55001D49CC /* InventoryEdit.swift in Sources */,
 				CC58CF65266B8100001D49CC /* ContentView.swift in Sources */,
 				CC58CF99266E1DD7001D49CC /* InventoryDetail.swift in Sources */,
 				CC58CF8F266D0509001D49CC /* InventoryList.swift in Sources */,
