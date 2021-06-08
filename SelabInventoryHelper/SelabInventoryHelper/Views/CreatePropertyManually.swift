@@ -24,14 +24,20 @@ struct CreatePropertyManually: View {
                 Image("inventory")
                     .resizable()
                     .scaledToFill()
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("儲存")
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            minHeight: 50,
+                            maxHeight: .infinity,
+                            alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
+                        )
+                        .foregroundColor(.white)
+                })
+                .background(Color(red: 71 / 255, green: 82 / 255, blue: 94 / 255))
+                .cornerRadius(20)
             }
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Text("儲存")
-                    .frame(width: UIScreen.main.bounds.width - 20, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(.white)
-            })
-            .background(Color(red: 71 / 255, green: 82 / 255, blue: 94 / 255))
-            .cornerRadius(20)
         }
     }
 }

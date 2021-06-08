@@ -8,22 +8,23 @@
 import SwiftUI
 
 struct CreateProperty: View {
-    @State private var selection = 1
+    @State private var selectedTab: Int = 0
     
     var body: some View {
         VStack {
-            TabView(selection:$selection) {
-                Color.yellow
-                    .tabItem {
-                        Text("條碼掃描")
-                            .font(.title2)
-                    }
-                    .tag(0)
-                CreatePropertyManually()
-                    .tabItem {
-                        Text("手動輸入")
-                    }
-                    .tag(1)
+            Picker("", selection: $selectedTab) {
+                Text("條碼掃描").tag(0)
+                Text("手動輸入").tag(1)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            
+            switch(selectedTab) {
+            case 0: Color.yellow
+                .ignoresSafeArea()
+            case 1: CreatePropertyManually()
+            default:
+                Color.red
+                    .ignoresSafeArea()
             }
         }
     }
