@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Inventory: ObservableObject {
+class Property: ObservableObject {
     @Published var identify = ""
     @Published var name: String = ""
     @Published var location: String = ""

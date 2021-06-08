@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreatePropertyManually: View {
-    @State private var property: Inventory = Inventory()
+    @State private var property: Property = Property()
     
     var body: some View {
         VStack {

@@ -8,13 +8,13 @@
 import Foundation
 import SwiftUI
 
-struct InventoryList: View {
+struct ListProperty: View {
     @State private var isEditing = false
     @State private var selectedTab: Int = 0
     @State private var searchText: String = ""
     @State private var showingAlert = false
     
-    let inventories = [Inventory(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡"), Inventory(identify: "B647", name: "手機", location: "宏裕科技大樓1624", description: "samsung")]
+    let inventories = [Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡"), Property(identify: "B647", name: "手機", location: "宏裕科技大樓1624", description: "samsung")]
     
     var body: some View {
         NavigationView {
@@ -29,7 +29,7 @@ struct InventoryList: View {
                 }
                 ForEach(inventories, id: \.identify) { (inventory) in
                     HStack {
-                        NavigationLink(destination: InventoryDetail(inventory: inventory)) {
+                        NavigationLink(destination: PropertyDetail(inventory: inventory)) {
                             HStack {
                                 Image("testImg")
                                     .resizable()
@@ -104,6 +104,6 @@ struct InventoryList: View {
 
 struct PropertyListView_Previews: PreviewProvider {
     static var previews: some View {
-        InventoryList()
+        ListProperty()
     }
 }

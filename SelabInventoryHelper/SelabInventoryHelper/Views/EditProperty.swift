@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct InventoryEdit: View {
-    @State public var inventory: Inventory
+struct EditProperty: View {
+    @State public var inventory: Property
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var imgIndex = 0
     @State private var shouldPresentImagePicker = false
@@ -20,14 +20,12 @@ struct InventoryEdit: View {
     
     
     var btnBack : some View {
-        NavigationLink(destination: InventoryDetail(inventory: inventory), label: {
+        NavigationLink(destination: PropertyDetail(inventory: inventory), label: {
             Text("Detail")
         })
     }
     
     var body: some View {
-        
-        
         VStack(alignment: .leading) {
             HStack {
                 TextField("財產編號：", text: $inventory.identify)

@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct InventoryDetail: View {
-    let inventory: Inventory
+struct PropertyDetail: View {
+    let inventory: Property
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var imgIndex = 0
     @State var isEditing = false
@@ -24,7 +24,7 @@ struct InventoryDetail: View {
     }
     
     var btnEdit : some View {
-        NavigationLink(destination: InventoryEdit(inventory: inventory), label: {
+        NavigationLink(destination: EditProperty(inventory: inventory), label: {
             Text("Edit")
         })
     }
