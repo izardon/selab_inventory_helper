@@ -19,7 +19,7 @@ struct CreateProperty: View {
                             .font(.title2)
                     }
                     .tag(0)
-                Color.white
+                CreatePropertyManually()
                     .tabItem {
                         Text("手動輸入")
                     }
