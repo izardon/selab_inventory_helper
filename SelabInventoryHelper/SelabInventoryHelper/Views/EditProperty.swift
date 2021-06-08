@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct EditProperty: View {
-    @State public var inventory: Property
+    @State public var property: Property
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var imgIndex = 0
     @State private var shouldPresentImagePicker = false
@@ -20,133 +20,80 @@ struct EditProperty: View {
     
     
     var btnBack : some View {
-        NavigationLink(destination: PropertyDetail(inventory: inventory), label: {
+        NavigationLink(destination: PropertyDetail(property: property), label: {
             Text("Detail")
         })
     }
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                TextField("財產編號：", text: $inventory.identify)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.blue, lineWidth: 2)
+            Form {
+                TextField("財產編號", text: $property.identify)
+                    .padding(.vertical, 10)
+                TextField("財產名稱", text: $property.name)
+                    .padding(.vertical, 10)
+                TextField("存放地點", text: $property.location)
+                    .padding(.vertical, 10)
+                TextArea("財產描述", text: $property.description)
+                    .frame(
+                        minWidth: 0,
+                        maxWidth: .infinity,
+                        minHeight: 100,
+                        maxHeight: .infinity
                     )
-                    .font(.largeTitle)
-                Spacer()
-            }
-            .padding(EdgeInsets(top: 10, leading: 10, bottom: 5, trailing: 10))
-            
-            Text("新增時間：\(inventory.getCreatedDate())")
-                .font(.body)
-                .foregroundColor(Color.gray)
-                .padding(EdgeInsets(top: 0, leading: 10, bottom: 5, trailing: 10))
-            
-            TextField("名稱編號：", text: $inventory.name)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.blue, lineWidth: 2)
-                )
-                .font(.title2)
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-            
-            TextField("存放地點：", text: $inventory.location)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.blue, lineWidth: 2)
-                )
-                .font(.title2)
-                .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-            
-            HStack {
-                TextEditor(text: $inventory.description)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.blue, lineWidth:  2)
-                    )
-                    .font(.title2)
-                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-            }
-            
-            
-            Spacer()
-            
-            HStack {
-                ImageSlider(index: $imgIndex.animation(), maxIndex: images.count - 1) {
-                    ForEach(0..<images.count, id: \.self) { idx in
-                        images[idx]
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    }
-                }
-                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-                .aspectRatio(4/3, contentMode: .fit)
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .shadow(radius: 5)
+                    .padding(.vertical, 10)
                 
-                Button(action: {
-                    self.shouldPresentActionScheet = true
-                }, label:{
-                    Image(systemName: "plus.circle")
-                        .resizable()
-                        .frame(width: 50, height: 50, alignment: .center)
-                })
-                .sheet(isPresented: $shouldPresentImagePicker) {
-                    SUImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, image: self.$uploadImage, images: self.$images, isPresented: self.$shouldPresentImagePicker)
-                }.actionSheet(isPresented: $shouldPresentActionScheet) { () -> ActionSheet in
-                    ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
-                        self.shouldPresentImagePicker = true
-                        self.shouldPresentCamera = true
-                    }), ActionSheet.Button.default(Text("Photo Library"), action: {
-                        self.shouldPresentImagePicker = true
-                        self.shouldPresentCamera = false
-                    }), ActionSheet.Button.cancel()])
-                }
-                
-            }
-            .frame(
-                minWidth: 0,
-                maxWidth: .infinity,
-                minHeight: 0,
-                maxHeight: .infinity,
-                alignment: .center
-            )
-            .border(Color.blue)
-            .padding(10)
-            
-            Spacer()
-            
-            Button(action: {
-                print("Save!")
-            }) {
                 HStack {
-                    Text("儲存")
-                        .fontWeight(.semibold)
-                        .font(.title)
+                    ImageSlider(index: $imgIndex.animation(), maxIndex: images.count - 1) {
+                        ForEach(0..<images.count, id: \.self) { idx in
+                            images[idx]
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .onTapGesture { self.shouldPresentActionScheet = true }
+                        }
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                    .aspectRatio(4/3, contentMode: .fit)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .shadow(radius: 5)
+                    .sheet(isPresented: $shouldPresentImagePicker) {
+                        SUImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, image: self.$uploadImage, images: self.$images, isPresented: self.$shouldPresentImagePicker)
+                    }.actionSheet(isPresented: $shouldPresentActionScheet) { () -> ActionSheet in
+                        ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+                            self.shouldPresentImagePicker = true
+                            self.shouldPresentCamera = true
+                        }), ActionSheet.Button.default(Text("Photo Library"), action: {
+                            self.shouldPresentImagePicker = true
+                            self.shouldPresentCamera = false
+                        }), ActionSheet.Button.cancel()])
+                    }
+                    
                 }
-                .frame(minWidth: 0, maxWidth: .infinity)
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.blue)
-                .cornerRadius(40)
-                .padding(.horizontal, 20)
+                .frame(
+                    minWidth: 0,
+                    maxWidth: .infinity,
+                    minHeight: 0,
+                    maxHeight: .infinity,
+                    alignment: .center
+                )
+                .padding(10)
+                
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Text("儲存")
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            minHeight: 50,
+                            maxHeight: .infinity,
+                            alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
+                        )
+                        .foregroundColor(.white)
+                })
+                .background(Color(red: 71 / 255, green: 82 / 255, blue: 94 / 255))
+                .cornerRadius(20)
             }
-            
-            Spacer()
         }
-        .frame(
-            minWidth: 0,
-            maxWidth: .infinity,
-            minHeight: 0,
-            maxHeight: .infinity,
-            alignment: .center
-        )
-        .navigationTitle(inventory.identify)
+        .navigationTitle(property.identify)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(leading: btnBack)
     }

@@ -25,6 +25,7 @@
 		CC58CFA0266E50DB001D49CC /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF9F266E50DB001D49CC /* ImageSlider.swift */; };
 		CC58CFA2266E5A55001D49CC /* EditProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFA1266E5A55001D49CC /* EditProperty.swift */; };
 		CC58CFA4266E7130001D49CC /* SUImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFA3266E7130001D49CC /* SUImagePicker.swift */; };
+		CC58CFB1266FB63B001D49CC /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFB0266FB63B001D49CC /* TextArea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		CC58CF9F266E50DB001D49CC /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
 		CC58CFA1266E5A55001D49CC /* EditProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProperty.swift; sourceTree = "<group>"; };
 		CC58CFA3266E7130001D49CC /* SUImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUImagePicker.swift; sourceTree = "<group>"; };
+		CC58CFB0266FB63B001D49CC /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				CC58CFA3266E7130001D49CC /* SUImagePicker.swift */,
 				CC58CF9A266E2982001D49CC /* SearchBar.swift */,
 				926054E3266EFD4B006BB51A /* ButtonWithImage.swift */,
+				CC58CFB0266FB63B001D49CC /* TextArea.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				CC58CF99266E1DD7001D49CC /* PropertyDetail.swift in Sources */,
 				CC58CF8F266D0509001D49CC /* ListProperty.swift in Sources */,
 				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
+				CC58CFB1266FB63B001D49CC /* TextArea.swift in Sources */,
 				926054EC266F0274006BB51A /* CreateProperty.swift in Sources */,
 				9205F38F266E43C0007BE24F /* InventoryTaking.swift in Sources */,
 				CC58CF99266E1DD7001D49CC /* PropertyDetail.swift in Sources */,

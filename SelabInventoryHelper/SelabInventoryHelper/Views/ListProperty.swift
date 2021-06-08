@@ -14,7 +14,7 @@ struct ListProperty: View {
     @State private var searchText: String = ""
     @State private var showingAlert = false
     
-    let inventories = [Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡"), Property(identify: "B647", name: "手機", location: "宏裕科技大樓1624", description: "samsung")]
+    let properties = [Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡"), Property(identify: "B647", name: "手機", location: "宏裕科技大樓1624", description: "")]
     
     var body: some View {
         NavigationView {
@@ -27,9 +27,9 @@ struct ListProperty: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
-                ForEach(inventories, id: \.identify) { (inventory) in
+                ForEach(properties, id: \.identify) { (inventory) in
                     HStack {
-                        NavigationLink(destination: PropertyDetail(inventory: inventory)) {
+                        NavigationLink(destination: PropertyDetail(property: inventory)) {
                             HStack {
                                 Image("testImg")
                                     .resizable()
