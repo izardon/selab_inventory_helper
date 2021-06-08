@@ -37,11 +37,11 @@ struct ListProperty: View {
                                 
                                 VStack(alignment: .leading) {
                                     Text(inventory.identify)
-                                        .font(.title)
+                                        .font(.title2)
                                     Text(inventory.name)
-                                        .font(.title3)
+                                        .font(.body)
                                     Text(inventory.location)
-                                        .font(.title3)
+                                        .font(.body)
                                 }
                                 
                                 Spacer()
@@ -50,7 +50,7 @@ struct ListProperty: View {
                                     Spacer()
                                     Image(systemName: "archivebox")
                                         .resizable()
-                                        .frame(width: 30, height: 30)
+                                        .frame(width: 20, height: 20)
                                         .foregroundColor(.blue)
                                         .onTapGesture {
                                             print("archivebox")
@@ -70,7 +70,7 @@ struct ListProperty: View {
                                     Spacer()
                                     Image(systemName: "trash")
                                         .resizable()
-                                        .frame(width: 30, height: 30)
+                                        .frame(width: 20, height: 20)
                                         .foregroundColor(.red)
                                         .onTapGesture {
                                             print("trash")
