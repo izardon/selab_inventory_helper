@@ -183,6 +183,8 @@
 			dependencies = (
 			);
 			name = SelabInventoryHelper;
+			packageProductDependencies = (
+			);
 			productName = SelabInventoryHelper;
 			productReference = CC58CF5F266B8100001D49CC /* SelabInventoryHelper.app */;
 			productType = "com.apple.product-type.application";
@@ -254,6 +256,8 @@
 				Base,
 			);
 			mainGroup = CC58CF56266B8100001D49CC;
+			packageReferences = (
+			);
 			productRefGroup = CC58CF60266B8100001D49CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

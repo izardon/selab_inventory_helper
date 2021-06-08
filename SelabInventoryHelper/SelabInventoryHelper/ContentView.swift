@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 2
-    @State private var searchText: String = ""
     
     var body: some View {
         VStack {

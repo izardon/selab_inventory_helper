@@ -10,7 +10,7 @@ import SwiftUI
 
 struct InventoryList: View {
     @State private var isEditing = false
-    @State private var selection = 2
+    @State private var selectedTab: Int = 0
     @State private var searchText: String = ""
     @State private var showingAlert = false
     
@@ -20,6 +20,13 @@ struct InventoryList: View {
         NavigationView {
             List {
                 SearchBar(searchText: $searchText)
+                HStack {
+                    Picker(selection: $selectedTab, label: Text("Color")) {
+                        Text("未報廢").tag(0)
+                        Text("已報廢").tag(1)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                }
                 ForEach(inventories, id: \.identify) { (inventory) in
                     HStack {
                         NavigationLink(destination: InventoryDetail(inventory: inventory)) {
