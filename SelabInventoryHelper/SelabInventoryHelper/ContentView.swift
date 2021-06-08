@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView(selection:$selection) {
-                Color.yellow
+                CreateProperty()
                     .tabItem {
                         Label(
                             title: { Text("新增財產") },
@@ -21,7 +21,7 @@ struct ContentView: View {
                         )
                     }
                     .tag(0)
-                Color.blue
+                InventoryTaking()
                     .tabItem {
                         Label(
                             title: { Text("盤點財產") },

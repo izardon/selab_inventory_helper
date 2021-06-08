@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9205F38F266E43C0007BE24F /* InventoryTaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205F38E266E43C0007BE24F /* InventoryTaking.swift */; };
+		926054E4266EFD4B006BB51A /* ButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926054E3266EFD4B006BB51A /* ButtonWithImage.swift */; };
+		926054EC266F0274006BB51A /* CreateProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926054EB266F0274006BB51A /* CreateProperty.swift */; };
+		92605505266F081C006BB51A /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 92605504266F081C006BB51A /* .gitattributes */; };
+		92605526266F103A006BB51A /* CreatePropertyManually.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92605525266F103A006BB51A /* CreatePropertyManually.swift */; };
 		CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF62266B8100001D49CC /* SelabInventoryHelperApp.swift */; };
 		CC58CF65266B8100001D49CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CF64266B8100001D49CC /* ContentView.swift */; };
 		CC58CF67266B8101001D49CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC58CF66266B8101001D49CC /* Assets.xcassets */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9205F38E266E43C0007BE24F /* InventoryTaking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTaking.swift; sourceTree = "<group>"; };
+		926054E3266EFD4B006BB51A /* ButtonWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithImage.swift; sourceTree = "<group>"; };
+		926054EB266F0274006BB51A /* CreateProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProperty.swift; sourceTree = "<group>"; };
+		92605504266F081C006BB51A /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		92605525266F103A006BB51A /* CreatePropertyManually.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePropertyManually.swift; sourceTree = "<group>"; };
 		CC58CF5F266B8100001D49CC /* SelabInventoryHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelabInventoryHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC58CF62266B8100001D49CC /* SelabInventoryHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelabInventoryHelperApp.swift; sourceTree = "<group>"; };
 		CC58CF64266B8100001D49CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,9 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9205F38A266E41D5007BE24F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				926054E3266EFD4B006BB51A /* ButtonWithImage.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		CC58CF56266B8100001D49CC = {
 			isa = PBXGroup;
 			children = (
+				92605504266F081C006BB51A /* .gitattributes */,
 				CC58CF61266B8100001D49CC /* SelabInventoryHelper */,
 				CC58CF73266B8101001D49CC /* SelabInventoryHelperTests */,
 				CC58CF7E266B8101001D49CC /* SelabInventoryHelperUITests */,
@@ -109,6 +128,7 @@
 		CC58CF61266B8100001D49CC /* SelabInventoryHelper */ = {
 			isa = PBXGroup;
 			children = (
+				9205F38A266E41D5007BE24F /* Components */,
 				CC58CF93266E1B27001D49CC /* Model */,
 				CC58CF8D266D045A001D49CC /* Views */,
 				CC58CF62266B8100001D49CC /* SelabInventoryHelperApp.swift */,
@@ -149,8 +169,11 @@
 		CC58CF8D266D045A001D49CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				92605525266F103A006BB51A /* CreatePropertyManually.swift */,
 				CC58CF8E266D0509001D49CC /* InventoryList.swift */,
 				CC58CF98266E1DD7001D49CC /* InventoryDetail.swift */,
+				9205F38E266E43C0007BE24F /* InventoryTaking.swift */,
+				926054EB266F0274006BB51A /* CreateProperty.swift */,
 				CC58CF9A266E2982001D49CC /* SearchBar.swift */,
 				CC58CF9F266E50DB001D49CC /* ImageSlider.swift */,
 				CC58CFA1266E5A55001D49CC /* InventoryEdit.swift */,
@@ -275,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC58CF6A266B8101001D49CC /* Preview Assets.xcassets in Resources */,
+				92605505266F081C006BB51A /* .gitattributes in Resources */,
 				CC58CF67266B8101001D49CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,8 +327,15 @@
 				CC58CF97266E1B75001D49CC /* Inventory.swift in Sources */,
 				CC58CFA0266E50DB001D49CC /* ImageSlider.swift in Sources */,
 				CC58CFA4266E7130001D49CC /* SUImagePicker.swift in Sources */,
+				92605526266F103A006BB51A /* CreatePropertyManually.swift in Sources */,
 				CC58CFA2266E5A55001D49CC /* InventoryEdit.swift in Sources */,
 				CC58CF65266B8100001D49CC /* ContentView.swift in Sources */,
+				926054E4266EFD4B006BB51A /* ButtonWithImage.swift in Sources */,
+				CC58CF99266E1DD7001D49CC /* InventoryDetail.swift in Sources */,
+				CC58CF8F266D0509001D49CC /* InventoryList.swift in Sources */,
+				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
+				926054EC266F0274006BB51A /* CreateProperty.swift in Sources */,
+				9205F38F266E43C0007BE24F /* InventoryTaking.swift in Sources */,
 				CC58CF99266E1DD7001D49CC /* InventoryDetail.swift in Sources */,
 				CC58CF8F266D0509001D49CC /* InventoryList.swift in Sources */,
 				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
@@ -550,6 +581,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SelabInventoryHelperUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -569,6 +601,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SelabInventoryHelperUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
