@@ -26,6 +26,7 @@
 		CC58CFA2266E5A55001D49CC /* EditProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFA1266E5A55001D49CC /* EditProperty.swift */; };
 		CC58CFA4266E7130001D49CC /* SUImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFA3266E7130001D49CC /* SUImagePicker.swift */; };
 		CC58CFB1266FB63B001D49CC /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFB0266FB63B001D49CC /* TextArea.swift */; };
+		CC58CFB3266FCB1A001D49CC /* ListPropertyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFB2266FCB1A001D49CC /* ListPropertyRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		CC58CFA1266E5A55001D49CC /* EditProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProperty.swift; sourceTree = "<group>"; };
 		CC58CFA3266E7130001D49CC /* SUImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUImagePicker.swift; sourceTree = "<group>"; };
 		CC58CFB0266FB63B001D49CC /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		CC58CFB2266FCB1A001D49CC /* ListPropertyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPropertyRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		9205F38A266E41D5007BE24F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CC58CFB2266FCB1A001D49CC /* ListPropertyRow.swift */,
 				CC58CF9F266E50DB001D49CC /* ImageSlider.swift */,
 				CC58CFA3266E7130001D49CC /* SUImagePicker.swift */,
 				CC58CF9A266E2982001D49CC /* SearchBar.swift */,
@@ -344,6 +347,7 @@
 				CC58CF8F266D0509001D49CC /* ListProperty.swift in Sources */,
 				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
 				CC58CF9B266E2982001D49CC /* SearchBar.swift in Sources */,
+				CC58CFB3266FCB1A001D49CC /* ListPropertyRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
