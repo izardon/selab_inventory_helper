@@ -29,7 +29,7 @@ struct ContentView: View {
                         )
                     }
                     .tag(1)
-                ListProperty()
+                ListProperty(viewModel: ListProperty.ViewModel())
                     .tabItem {
                         Label(
                             title: { Text("檢視財產") },

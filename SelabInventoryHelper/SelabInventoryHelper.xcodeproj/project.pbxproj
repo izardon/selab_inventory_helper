@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EE12C8D06A5F8EEF86153E4 /* Pods_SelabInventoryHelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BA4E9A7E37C11EB5A48FEC /* Pods_SelabInventoryHelperTests.framework */; };
+		4D236EA88BBC5993574612F8 /* Pods_SelabInventoryHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA21DF02B1B80025ADC1AF8 /* Pods_SelabInventoryHelper.framework */; };
+		8CE17B84B03AF4023D495254 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D1DC72C8B6408613F2E760 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework */; };
 		9205F38F266E43C0007BE24F /* InventoryTaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205F38E266E43C0007BE24F /* InventoryTaking.swift */; };
 		926054E4266EFD4B006BB51A /* ButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926054E3266EFD4B006BB51A /* ButtonWithImage.swift */; };
 		926054EC266F0274006BB51A /* CreateProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926054EB266F0274006BB51A /* CreateProperty.swift */; };
@@ -27,6 +30,10 @@
 		CC58CFA4266E7130001D49CC /* SUImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFA3266E7130001D49CC /* SUImagePicker.swift */; };
 		CC58CFB1266FB63B001D49CC /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFB0266FB63B001D49CC /* TextArea.swift */; };
 		CC58CFB3266FCB1A001D49CC /* ListPropertyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CFB2266FCB1A001D49CC /* ListPropertyRow.swift */; };
+		CCAB356B2674C76F00034E45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCAB356A2674C76F00034E45 /* GoogleService-Info.plist */; };
+		CCAB356D2674E1A400034E45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB356C2674E1A400034E45 /* AppDelegate.swift */; };
+		CCAB35702674E5AC00034E45 /* PropertyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB356F2674E5AC00034E45 /* PropertyRepository.swift */; };
+		CCAB35732674F20900034E45 /* ListPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35722674F20900034E45 /* ListPropertyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,11 +54,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BE323931D29565BD78BCE6E /* Pods-SelabInventoryHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelperTests/Pods-SelabInventoryHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		279A910C1037879558597D2B /* Pods-SelabInventoryHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper.release.xcconfig"; sourceTree = "<group>"; };
+		43CE9B2CE42F2F22204BFFCC /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper-SelabInventoryHelperUITests/Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5AA00FCFF9BB4CF633A22AF6 /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper-SelabInventoryHelperUITests/Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6AA21DF02B1B80025ADC1AF8 /* Pods_SelabInventoryHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9205F38E266E43C0007BE24F /* InventoryTaking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTaking.swift; sourceTree = "<group>"; };
 		926054E3266EFD4B006BB51A /* ButtonWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithImage.swift; sourceTree = "<group>"; };
 		926054EB266F0274006BB51A /* CreateProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProperty.swift; sourceTree = "<group>"; };
 		92605504266F081C006BB51A /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		92605525266F103A006BB51A /* CreatePropertyManually.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePropertyManually.swift; sourceTree = "<group>"; };
+		C0D1DC72C8B6408613F2E760 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC58CF5F266B8100001D49CC /* SelabInventoryHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelabInventoryHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC58CF62266B8100001D49CC /* SelabInventoryHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelabInventoryHelperApp.swift; sourceTree = "<group>"; };
 		CC58CF64266B8100001D49CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +86,13 @@
 		CC58CFA3266E7130001D49CC /* SUImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUImagePicker.swift; sourceTree = "<group>"; };
 		CC58CFB0266FB63B001D49CC /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		CC58CFB2266FCB1A001D49CC /* ListPropertyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPropertyRow.swift; sourceTree = "<group>"; };
+		CCAB356A2674C76F00034E45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CCAB356C2674E1A400034E45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCAB356F2674E5AC00034E45 /* PropertyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyRepository.swift; sourceTree = "<group>"; };
+		CCAB35722674F20900034E45 /* ListPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPropertyViewModel.swift; sourceTree = "<group>"; };
+		D6A600C3AB65478DD2DA8B0E /* Pods-SelabInventoryHelperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelperTests.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelperTests/Pods-SelabInventoryHelperTests.release.xcconfig"; sourceTree = "<group>"; };
+		D6BA4E9A7E37C11EB5A48FEC /* Pods_SelabInventoryHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E57E99CE48D16CDF10A24D7A /* Pods-SelabInventoryHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D236EA88BBC5993574612F8 /* Pods_SelabInventoryHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE12C8D06A5F8EEF86153E4 /* Pods_SelabInventoryHelperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE17B84B03AF4023D495254 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +136,29 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		97B7E5E8AAD5C11D7CAD3C8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E57E99CE48D16CDF10A24D7A /* Pods-SelabInventoryHelper.debug.xcconfig */,
+				279A910C1037879558597D2B /* Pods-SelabInventoryHelper.release.xcconfig */,
+				5AA00FCFF9BB4CF633A22AF6 /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig */,
+				43CE9B2CE42F2F22204BFFCC /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig */,
+				0BE323931D29565BD78BCE6E /* Pods-SelabInventoryHelperTests.debug.xcconfig */,
+				D6A600C3AB65478DD2DA8B0E /* Pods-SelabInventoryHelperTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AA5D1A7A213D5A57ADBC543E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AA21DF02B1B80025ADC1AF8 /* Pods_SelabInventoryHelper.framework */,
+				C0D1DC72C8B6408613F2E760 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework */,
+				D6BA4E9A7E37C11EB5A48FEC /* Pods_SelabInventoryHelperTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC58CF56266B8100001D49CC = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +167,8 @@
 				CC58CF73266B8101001D49CC /* SelabInventoryHelperTests */,
 				CC58CF7E266B8101001D49CC /* SelabInventoryHelperUITests */,
 				CC58CF60266B8100001D49CC /* Products */,
+				97B7E5E8AAD5C11D7CAD3C8A /* Pods */,
+				AA5D1A7A213D5A57ADBC543E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,14 +185,18 @@
 		CC58CF61266B8100001D49CC /* SelabInventoryHelper */ = {
 			isa = PBXGroup;
 			children = (
+				CCAB35712674EF5E00034E45 /* ViewModels */,
+				CCAB356E2674E58100034E45 /* Repositories */,
+				CCAB356A2674C76F00034E45 /* GoogleService-Info.plist */,
 				9205F38A266E41D5007BE24F /* Components */,
-				CC58CF93266E1B27001D49CC /* Model */,
+				CC58CF93266E1B27001D49CC /* Models */,
 				CC58CF8D266D045A001D49CC /* Views */,
 				CC58CF62266B8100001D49CC /* SelabInventoryHelperApp.swift */,
 				CC58CF64266B8100001D49CC /* ContentView.swift */,
 				CC58CF66266B8101001D49CC /* Assets.xcassets */,
 				CC58CF6B266B8101001D49CC /* Info.plist */,
 				CC58CF68266B8101001D49CC /* Preview Content */,
+				CCAB356C2674E1A400034E45 /* AppDelegate.swift */,
 			);
 			path = SelabInventoryHelper;
 			sourceTree = "<group>";
@@ -188,12 +240,28 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CC58CF93266E1B27001D49CC /* Model */ = {
+		CC58CF93266E1B27001D49CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CC58CF96266E1B75001D49CC /* Property.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CCAB356E2674E58100034E45 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB356F2674E5AC00034E45 /* PropertyRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CCAB35712674EF5E00034E45 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB35722674F20900034E45 /* ListPropertyViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,17 +271,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC58CF84266B8101001D49CC /* Build configuration list for PBXNativeTarget "SelabInventoryHelper" */;
 			buildPhases = (
+				B861019CB9FA7B6234041979 /* [CP] Check Pods Manifest.lock */,
 				CC58CF5B266B8100001D49CC /* Sources */,
 				CC58CF5C266B8100001D49CC /* Frameworks */,
 				CC58CF5D266B8100001D49CC /* Resources */,
+				BB0E41B72BCB6C4A9309D9E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SelabInventoryHelper;
-			packageProductDependencies = (
-			);
 			productName = SelabInventoryHelper;
 			productReference = CC58CF5F266B8100001D49CC /* SelabInventoryHelper.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +290,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC58CF87266B8101001D49CC /* Build configuration list for PBXNativeTarget "SelabInventoryHelperTests" */;
 			buildPhases = (
+				A8EDD217B163AA5047E870B4 /* [CP] Check Pods Manifest.lock */,
 				CC58CF6C266B8101001D49CC /* Sources */,
 				CC58CF6D266B8101001D49CC /* Frameworks */,
 				CC58CF6E266B8101001D49CC /* Resources */,
@@ -240,9 +309,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC58CF8A266B8101001D49CC /* Build configuration list for PBXNativeTarget "SelabInventoryHelperUITests" */;
 			buildPhases = (
+				D42AE21C91DBEE3AD9703AEC /* [CP] Check Pods Manifest.lock */,
 				CC58CF77266B8101001D49CC /* Sources */,
 				CC58CF78266B8101001D49CC /* Frameworks */,
 				CC58CF79266B8101001D49CC /* Resources */,
+				EF946AE191D6C73CC3914641 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,8 +356,6 @@
 				Base,
 			);
 			mainGroup = CC58CF56266B8100001D49CC;
-			packageReferences = (
-			);
 			productRefGroup = CC58CF60266B8100001D49CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -306,6 +375,7 @@
 				CC58CF6A266B8101001D49CC /* Preview Assets.xcassets in Resources */,
 				92605505266F081C006BB51A /* .gitattributes in Resources */,
 				CC58CF67266B8101001D49CC /* Assets.xcassets in Resources */,
+				CCAB356B2674C76F00034E45 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,13 +395,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A8EDD217B163AA5047E870B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SelabInventoryHelperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B861019CB9FA7B6234041979 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SelabInventoryHelper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB0E41B72BCB6C4A9309D9E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D42AE21C91DBEE3AD9703AEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SelabInventoryHelper-SelabInventoryHelperUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF946AE191D6C73CC3914641 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper-SelabInventoryHelperUITests/Pods-SelabInventoryHelper-SelabInventoryHelperUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper-SelabInventoryHelperUITests/Pods-SelabInventoryHelper-SelabInventoryHelperUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper-SelabInventoryHelperUITests/Pods-SelabInventoryHelper-SelabInventoryHelperUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CC58CF5B266B8100001D49CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CC58CF97266E1B75001D49CC /* Property.swift in Sources */,
+				CCAB35732674F20900034E45 /* ListPropertyViewModel.swift in Sources */,
 				CC58CFA0266E50DB001D49CC /* ImageSlider.swift in Sources */,
+				CCAB356D2674E1A400034E45 /* AppDelegate.swift in Sources */,
 				CC58CFA4266E7130001D49CC /* SUImagePicker.swift in Sources */,
 				92605526266F103A006BB51A /* CreatePropertyManually.swift in Sources */,
 				CC58CFA2266E5A55001D49CC /* EditProperty.swift in Sources */,
@@ -345,6 +520,7 @@
 				9205F38F266E43C0007BE24F /* InventoryTaking.swift in Sources */,
 				CC58CF99266E1DD7001D49CC /* PropertyDetail.swift in Sources */,
 				CC58CF8F266D0509001D49CC /* ListProperty.swift in Sources */,
+				CCAB35702674E5AC00034E45 /* PropertyRepository.swift in Sources */,
 				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
 				CC58CF9B266E2982001D49CC /* SearchBar.swift in Sources */,
 				CC58CFB3266FCB1A001D49CC /* ListPropertyRow.swift in Sources */,
@@ -501,11 +677,13 @@
 		};
 		CC58CF85266B8101001D49CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E57E99CE48D16CDF10A24D7A /* Pods-SelabInventoryHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SelabInventoryHelper/Preview Content\"";
+				DEVELOPMENT_TEAM = MCWR959BM5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SelabInventoryHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -516,17 +694,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.selab1421.no97.SelabInventoryHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CC58CF86266B8101001D49CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 279A910C1037879558597D2B /* Pods-SelabInventoryHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SelabInventoryHelper/Preview Content\"";
+				DEVELOPMENT_TEAM = MCWR959BM5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SelabInventoryHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -537,12 +717,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.selab1421.no97.SelabInventoryHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		CC58CF88266B8101001D49CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BE323931D29565BD78BCE6E /* Pods-SelabInventoryHelperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +745,7 @@
 		};
 		CC58CF89266B8101001D49CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6A600C3AB65478DD2DA8B0E /* Pods-SelabInventoryHelperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -585,6 +767,7 @@
 		};
 		CC58CF8B266B8101001D49CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AA00FCFF9BB4CF633A22AF6 /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -605,6 +788,7 @@
 		};
 		CC58CF8C266B8101001D49CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43CE9B2CE42F2F22204BFFCC /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,15 +7,15 @@
 
 import Foundation
 import SwiftUI
+import Firebase
 
 struct ListProperty: View {
+    @ObservedObject var viewModel: ViewModel
     @State private var isScrapped: Bool = false
     @State private var searchText: String = ""
-    
-    let properties = [Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡", isScrapped: false), Property(identify: "B647", name: "手機", location: "宏裕科技大樓1624", description: "", isScrapped: false), Property(identify: "G964", name: "電腦", location: "宏裕科技大樓1421", description: "20年老電腦", isScrapped: true)]
+//    let properties = [Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡", isScrapped: false), Property(identify: "B647", name: "手機", location: "宏裕科技大樓1624", description: "", isScrapped: false), Property(identify: "G964", name: "電腦", location: "宏裕科技大樓1421", description: "20年老電腦", isScrapped: true)]
     
     var body: some View {
-        
         NavigationView {
             VStack {
                 List {
@@ -29,7 +29,7 @@ struct ListProperty: View {
                         .pickerStyle(SegmentedPickerStyle())
                     }
                     
-                    ForEach(properties, id: \.identify) { (property) in
+                    ForEach(viewModel.properties, id: \.identify) { (property) in
                         if property.isScrapped == isScrapped && (searchText.isEmpty ? true : property.identify.contains(searchText))  {
                             ListPropertyRow(property: property, isScrapped: isScrapped)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -38,6 +38,9 @@ struct ListProperty: View {
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
                 }
+                .onAppear(perform: {
+                    self.viewModel.loadProperties()
+                })
                 .listStyle(GroupedListStyle())
             }
         }
@@ -47,6 +50,6 @@ struct ListProperty: View {
 
 struct PropertyListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListProperty()
+        ListProperty(viewModel: ListProperty.ViewModel())
     }
 }
