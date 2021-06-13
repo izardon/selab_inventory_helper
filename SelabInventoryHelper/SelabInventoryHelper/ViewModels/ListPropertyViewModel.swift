@@ -26,8 +26,9 @@ extension ListProperty {
         }
         
         func deleteProperty(property: Property) {
-            repo.delete(property: property)
-            self.properties = self.properties.filter { $0.identify != property.identify }
+            if repo.delete(property: property) != nil {
+                self.properties = self.properties.filter { $0.identify != property.identify }
+            }
         }
     }
 }

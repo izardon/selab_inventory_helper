@@ -9,24 +9,20 @@ import Foundation
 import Firebase
 
 class PropertyRepository: ObservableObject {
-    @Published var title: String = ""
-    @Published var message: String = ""
-    @Published var operationSuccess: Bool = false
     
-    func save(property: Property) {
+    func save(property: Property) -> String? {
         let db = Firestore.firestore()
+        
+        var documentId:String?
         do {
             let documentReference = try
                 db.collection("properties").addDocument(from: property)
-            
-            self.title = "新增財產成功"
-            self.message = "New Document Id is \(documentReference.documentID)"
-            self.operationSuccess = true
+            documentId = documentReference.documentID
         } catch {
-            self.title = "新增財產失敗"
-            self.operationSuccess = false
             print(error)
         }
+        
+        return documentId
     }
     
     func get (completion: @escaping ([Property]) -> ()) {
@@ -46,16 +42,20 @@ class PropertyRepository: ObservableObject {
         }
     }
     
-    func delete(property: Property) {
+    func delete(property: Property) -> String? {
         let db = Firestore.firestore()
+        
+        var documentId:String? = property.id!
         db.collection("properties").document(property.id!).delete() { err in
             if let err = err {
-                self.operationSuccess = false
                 print("Error removing document: \(err)")
+                documentId = nil
             }
-            else {
-                self.operationSuccess = true
+            else {                
             }
         }
+        print("documentId = \(documentId!)")
+        
+        return documentId
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreatePropertyManually: View {
-    @ObservedObject var repo = PropertyRepository()
+    @ObservedObject var viewModel: ViewModel
     @State private var property: Property = Property()
     @State private var showingSaveAlert: Bool = false
     
@@ -27,7 +27,7 @@ struct CreatePropertyManually: View {
                     .resizable()
                     .scaledToFill()
                 Button(action: {
-                    repo.save(property: property)
+                    viewModel.saveProperty(property: property)
                     showingSaveAlert = true
                 }
                 , label: {
@@ -43,10 +43,10 @@ struct CreatePropertyManually: View {
                 })
                 .alert(isPresented: $showingSaveAlert) {
                     Alert(
-                        title: Text(repo.title),
-                        message: Text(repo.message),
+                        title: Text(viewModel.title),
+                        message: Text(viewModel.message),
                         dismissButton: .default(Text("確定"), action: {
-                            if repo.operationSuccess {
+                            if viewModel.operationSuccess {
                                 property = Property()
                             }
                         })
@@ -61,6 +61,6 @@ struct CreatePropertyManually: View {
 
 struct CreatePropertyManually_Previews: PreviewProvider {
     static var previews: some View {
-        CreatePropertyManually()
+        CreatePropertyManually(viewModel: CreatePropertyManually.ViewModel())
     }
 }

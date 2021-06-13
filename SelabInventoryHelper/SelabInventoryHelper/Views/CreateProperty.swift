@@ -21,7 +21,7 @@ struct CreateProperty: View {
             switch(selectedTab) {
             case 0: Color.yellow
                 .ignoresSafeArea()
-            case 1: CreatePropertyManually()
+            case 1: CreatePropertyManually(viewModel: CreatePropertyManually.ViewModel())
             default:
                 Color.red
                     .ignoresSafeArea()
