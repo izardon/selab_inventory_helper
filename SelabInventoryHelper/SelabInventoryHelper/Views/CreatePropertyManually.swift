@@ -46,7 +46,7 @@ struct CreatePropertyManually: View {
                         title: Text(repo.title),
                         message: Text(repo.message),
                         dismissButton: .default(Text("確定"), action: {
-                            if repo.isSaveSuccess {
+                            if repo.operationSuccess {
                                 property = Property()
                             }
                         })

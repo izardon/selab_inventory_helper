@@ -20,10 +20,14 @@ extension ListProperty {
         func loadProperties() {
             repo.get() { [weak self] properties in
                 DispatchQueue.main.async {
-                   self?.properties = properties
+                    self?.properties = properties
                 }
-             }
+            }
+        }
+        
+        func deleteProperty(property: Property) {
+            repo.delete(property: property)
+            self.properties = self.properties.filter { $0.identify != property.identify }
         }
     }
 }
-

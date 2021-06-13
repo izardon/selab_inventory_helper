@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct ListPropertyRow: View {
+    @ObservedObject var viewModel: ListProperty.ViewModel
     @State var property: Property
     @State var isScrapped: Bool
     @State private var showingScrapAlert = false
@@ -92,6 +93,7 @@ struct ListPropertyRow: View {
                                     title: Text("確定要刪除這筆財產？"),
                                     message: Text("無法還原"),
                                     primaryButton: .destructive(Text("刪除")) {
+                                        viewModel.deleteProperty(property: property)
                                         print("Deleting...")
                                     },
                                     secondaryButton: .cancel(Text("取消"))
@@ -109,6 +111,6 @@ struct ListPropertyRow: View {
 
 struct ListInUsePropertyView_Previews: PreviewProvider {
     static var previews: some View {
-        ListPropertyRow(property: Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡", isScrapped: false), isScrapped: false)
+        ListPropertyRow(viewModel: ListProperty.ViewModel(), property: Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡", isScrapped: false), isScrapped: false)
     }
 }

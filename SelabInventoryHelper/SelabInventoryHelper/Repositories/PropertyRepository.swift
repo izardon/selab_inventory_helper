@@ -11,7 +11,7 @@ import Firebase
 class PropertyRepository: ObservableObject {
     @Published var title: String = ""
     @Published var message: String = ""
-    @Published var isSaveSuccess: Bool = false
+    @Published var operationSuccess: Bool = false
     
     func save(property: Property) {
         let db = Firestore.firestore()
@@ -21,10 +21,10 @@ class PropertyRepository: ObservableObject {
             
             self.title = "新增財產成功"
             self.message = "New Document Id is \(documentReference.documentID)"
-            self.isSaveSuccess = true
+            self.operationSuccess = true
         } catch {
             self.title = "新增財產失敗"
-            self.isSaveSuccess = false
+            self.operationSuccess = false
             print(error)
         }
     }
@@ -46,14 +46,16 @@ class PropertyRepository: ObservableObject {
         }
     }
     
-    func deleteInjury(injury: Injury) {
-      db.collection("injury").document(injury.id).delete() { err in
-        if let err = err {
-          print("Error removing document: \(err)")
+    func delete(property: Property) {
+        let db = Firestore.firestore()
+        db.collection("properties").document(property.id!).delete() { err in
+            if let err = err {
+                self.operationSuccess = false
+                print("Error removing document: \(err)")
+            }
+            else {
+                self.operationSuccess = true
+            }
         }
-        else {
-          print("Document successfully removed!")
-        }
-      }
     }
 }

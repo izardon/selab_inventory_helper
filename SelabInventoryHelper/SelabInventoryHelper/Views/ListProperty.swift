@@ -31,7 +31,7 @@ struct ListProperty: View {
                     
                     ForEach(viewModel.properties, id: \.identify) { (property) in
                         if property.isScrapped == isScrapped && (searchText.isEmpty ? true : property.identify.contains(searchText))  {
-                            ListPropertyRow(property: property, isScrapped: isScrapped)
+                            ListPropertyRow(viewModel: viewModel, property: property, isScrapped: isScrapped)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
                     }
