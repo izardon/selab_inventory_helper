@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct CreatePropertyManually: View {
+    @ObservedObject var repo = PropertyRepository()
     @State private var property: Property = Property()
+    @State private var showingSaveAlert: Bool = false
     
     var body: some View {
         VStack {
@@ -24,7 +26,11 @@ struct CreatePropertyManually: View {
                 Image("inventory")
                     .resizable()
                     .scaledToFill()
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    repo.save(property: property)
+                    showingSaveAlert = true
+                }
+                , label: {
                     Text("儲存")
                         .frame(
                             minWidth: 0,
@@ -35,6 +41,17 @@ struct CreatePropertyManually: View {
                         )
                         .foregroundColor(.white)
                 })
+                .alert(isPresented: $showingSaveAlert) {
+                    Alert(
+                        title: Text(repo.title),
+                        message: Text(repo.message),
+                        dismissButton: .default(Text("確定"), action: {
+                            if repo.isSaveSuccess {
+                                property = Property()
+                            }
+                        })
+                    )
+                }
                 .background(Color(red: 71 / 255, green: 82 / 255, blue: 94 / 255))
                 .cornerRadius(20)
             }
