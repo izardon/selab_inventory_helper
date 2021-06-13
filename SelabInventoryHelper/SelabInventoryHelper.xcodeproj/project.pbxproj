@@ -35,6 +35,7 @@
 		CCAB35702674E5AC00034E45 /* PropertyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB356F2674E5AC00034E45 /* PropertyRepository.swift */; };
 		CCAB35732674F20900034E45 /* ListPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35722674F20900034E45 /* ListPropertyViewModel.swift */; };
 		CCAB35752675E1DB00034E45 /* CreatePropertyManuallyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35742675E1DB00034E45 /* CreatePropertyManuallyViewModel.swift */; };
+		CCAB35772675EDE800034E45 /* EditPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35762675EDE800034E45 /* EditPropertyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		CCAB356F2674E5AC00034E45 /* PropertyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyRepository.swift; sourceTree = "<group>"; };
 		CCAB35722674F20900034E45 /* ListPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPropertyViewModel.swift; sourceTree = "<group>"; };
 		CCAB35742675E1DB00034E45 /* CreatePropertyManuallyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePropertyManuallyViewModel.swift; sourceTree = "<group>"; };
+		CCAB35762675EDE800034E45 /* EditPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPropertyViewModel.swift; sourceTree = "<group>"; };
 		D6A600C3AB65478DD2DA8B0E /* Pods-SelabInventoryHelperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelperTests.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelperTests/Pods-SelabInventoryHelperTests.release.xcconfig"; sourceTree = "<group>"; };
 		D6BA4E9A7E37C11EB5A48FEC /* Pods_SelabInventoryHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57E99CE48D16CDF10A24D7A /* Pods-SelabInventoryHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				CCAB35722674F20900034E45 /* ListPropertyViewModel.swift */,
 				CCAB35742675E1DB00034E45 /* CreatePropertyManuallyViewModel.swift */,
+				CCAB35762675EDE800034E45 /* EditPropertyViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				CCAB35732674F20900034E45 /* ListPropertyViewModel.swift in Sources */,
 				CC58CFA0266E50DB001D49CC /* ImageSlider.swift in Sources */,
 				CCAB356D2674E1A400034E45 /* AppDelegate.swift in Sources */,
+				CCAB35772675EDE800034E45 /* EditPropertyViewModel.swift in Sources */,
 				CC58CFA4266E7130001D49CC /* SUImagePicker.swift in Sources */,
 				92605526266F103A006BB51A /* CreatePropertyManually.swift in Sources */,
 				CC58CFA2266E5A55001D49CC /* EditProperty.swift in Sources */,

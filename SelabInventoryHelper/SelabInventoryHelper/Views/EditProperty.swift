@@ -9,21 +9,16 @@ import Foundation
 import SwiftUI
 
 struct EditProperty: View {
+    @ObservedObject var viewModel: ViewModel
+    
     @State public var property: Property
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var imgIndex = 0
+    @State private var imgIndex = 0
     @State private var shouldPresentImagePicker = false
     @State private var shouldPresentActionScheet = false
     @State private var shouldPresentCamera = false
     @State private var images = [Image("testImg"), Image("testImg2")]
     @State private var uploadImage: Image? = Image("testImg")
-    
-    
-    var btnBack : some View {
-        NavigationLink(destination: PropertyDetail(property: property), label: {
-            Text("Detail")
-        })
-    }
+    @State private var showingSaveAlert: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -78,7 +73,10 @@ struct EditProperty: View {
                 )
                 .padding(10)
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    viewModel.updateProperty(property: property)
+                    showingSaveAlert = true
+                }, label: {
                     Text("儲存")
                         .frame(
                             minWidth: 0,
@@ -89,12 +87,20 @@ struct EditProperty: View {
                         )
                         .foregroundColor(.white)
                 })
+                .alert(isPresented: $showingSaveAlert) {
+                    Alert(
+                        title: Text(viewModel.title),
+                        message: Text(viewModel.message),
+                        dismissButton: .default(Text("確定"), action: {
+                            
+                        })
+                    )
+                }
                 .background(Color(red: 71 / 255, green: 82 / 255, blue: 94 / 255))
                 .cornerRadius(20)
             }
         }
-        .navigationTitle(property.identify)
+        .navigationTitle("Edit")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(leading: btnBack)
     }
 }

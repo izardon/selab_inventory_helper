@@ -9,10 +9,9 @@ import Foundation
 import Firebase
 
 class PropertyRepository: ObservableObject {
+    let db = Firestore.firestore()
     
     func save(property: Property) -> String? {
-        let db = Firestore.firestore()
-        
         var documentId:String?
         do {
             let documentReference = try
@@ -26,7 +25,6 @@ class PropertyRepository: ObservableObject {
     }
     
     func get (completion: @escaping ([Property]) -> ()) {
-        let db = Firestore.firestore()
         db.collection("properties").order(by: "createdDate", descending: true).getDocuments { snapshot, error in
             guard let documents = snapshot?.documents else {
                 fatalError("error downloading documents")
@@ -42,13 +40,34 @@ class PropertyRepository: ObservableObject {
         }
     }
     
-    func delete(property: Property) -> String? {
-        let db = Firestore.firestore()
-        
+    func getById(propertyId: String, completion: @escaping (Property) -> ()){
+        var property = Property()
+        db.collection("properties").document(propertyId).getDocument { (document, error) in
+            if let document = document, document.exists {
+                property = try! document.data(as: Property.self)!
+            }
+            completion(property)
+        }
+    }
+    
+    func update(property: Property) -> String? {
         var documentId:String? = property.id!
-        db.collection("properties").document(property.id!).delete() { err in
-            if let err = err {
-                print("Error removing document: \(err)")
+        do {
+            try db.collection("properties").document(documentId!).setData(from: property)
+        }
+        catch {
+            print("Error updating document: \(error)")
+            documentId = nil
+        }
+        
+        return documentId
+    }
+    
+    func delete(property: Property) -> String? {
+        var documentId:String? = property.id!
+        db.collection("properties").document(documentId!).delete() { error in
+            if let error = error {
+                print("Error removing document: \(error)")
                 documentId = nil
             }
             else {                

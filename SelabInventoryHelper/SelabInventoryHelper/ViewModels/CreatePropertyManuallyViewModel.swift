@@ -10,7 +10,6 @@ import Foundation
 extension CreatePropertyManually {
     class ViewModel: ObservableObject {
         private let repo: PropertyRepository
-        @Published private(set) var properties: [Property]
         
         @Published var title: String = ""
         @Published var message: String = ""
@@ -18,7 +17,6 @@ extension CreatePropertyManually {
         
         init() {
             self.repo = PropertyRepository()
-            self.properties = []
         }
         
         func saveProperty(property: Property) {

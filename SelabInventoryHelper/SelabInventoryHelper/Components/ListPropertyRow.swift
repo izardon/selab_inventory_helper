@@ -8,10 +8,12 @@
 import Foundation
 import SwiftUI
 
+
+
 struct ListPropertyRow: View {
     @ObservedObject var viewModel: ListProperty.ViewModel
-    @State var property: Property
-    @State var isScrapped: Bool
+    @ObservedObject var property: Property
+    @State public var isScrapped: Bool
     @State private var showingScrapAlert = false
     @State private var showingTrashAlert = false
     

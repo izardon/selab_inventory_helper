@@ -9,10 +9,11 @@ import Foundation
 import SwiftUI
 import Firebase
 
+
 struct ListProperty: View {
     @ObservedObject var viewModel: ViewModel
-    @State private var isScrapped: Bool = false
-    @State private var searchText: String = ""
+    @State public var isScrapped: Bool = false
+    @State public var searchText: String = ""
     //    let properties = [Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡", isScrapped: false), Property(identify: "B647", name: "手機", location: "宏裕科技大樓1624", description: "", isScrapped: false), Property(identify: "G964", name: "電腦", location: "宏裕科技大樓1421", description: "20年老電腦", isScrapped: true)]
     
     var body: some View {
@@ -33,6 +34,7 @@ struct ListProperty: View {
                         if property.isScrapped == isScrapped && (searchText.isEmpty ? true : property.identify.contains(searchText))  {
                             ListPropertyRow(viewModel: viewModel, property: property, isScrapped: isScrapped)
                                 .fixedSize(horizontal: false, vertical: true)
+                            
                         }
                     }
                 }

@@ -9,23 +9,14 @@ import Foundation
 import SwiftUI
 
 struct PropertyDetail: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State public var property: Property
-    @State var imgIndex = 0
-    @State var isEditing = false
+    public var property: Property
+    
+    @State private var imgIndex = 0
+    @State private var isEditing = false
     @State private var images = [Image("testImg"), Image("testImg2")]
     
-    var btnBack : some View { Button(action: {
-        self.presentationMode.wrappedValue.dismiss()
-    }) {
-        HStack {
-            Text("Back")
-        }
-    }
-    }
-    
     var btnEdit : some View {
-        NavigationLink(destination: EditProperty(property: property), label: {
+        NavigationLink(destination: EditProperty(viewModel: EditProperty.ViewModel(), property: property), label: {
             Text("Edit")
         })
     }
@@ -66,9 +57,9 @@ struct PropertyDetail: View {
                 )
                 .padding(10)
             }
-            .navigationTitle(property.identify)
+            .navigationTitle("View")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(leading: btnBack, trailing: btnEdit)
+            .navigationBarItems(trailing: btnEdit)
         }
     }
 }
