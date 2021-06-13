@@ -9,6 +9,22 @@ import Foundation
 import Firebase
 
 class PropertyRepository: ObservableObject {
+    @Published var title: String = ""
+    @Published var message: String = ""
+    
+    func save(property: Property) {
+        let db = Firestore.firestore()
+        do {
+            let documentReference = try
+                db.collection("properties").addDocument(from: property)
+            
+            self.title = "新增財產成功"
+            self.message = "New Document Id is \(documentReference.documentID)"
+        } catch {
+            self.title = "新增財產失敗"
+            print(error)
+        }
+    }
     
     func get (completion: @escaping ([Property]) -> ()) {
         let db = Firestore.firestore()
