@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9205F38F266E43C0007BE24F /* InventoryTaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205F38E266E43C0007BE24F /* InventoryTaking.swift */; };
+		92114B8B267C92FB00557EC9 /* ImgePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92114B8A267C92FB00557EC9 /* ImgePicker.swift */; };
+		9228FC5C267D377B006CB3BA /* InventoryHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228FC5B267D377B006CB3BA /* InventoryHistory.swift */; };
+		9228FC61267D3804006CB3BA /* InventoryLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228FC60267D3804006CB3BA /* InventoryLog.swift */; };
+		9228FC66267D38E9006CB3BA /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228FC65267D38E9006CB3BA /* InventoryItem.swift */; };
 		926054E4266EFD4B006BB51A /* ButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926054E3266EFD4B006BB51A /* ButtonWithImage.swift */; };
 		926054EC266F0274006BB51A /* CreateProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926054EB266F0274006BB51A /* CreateProperty.swift */; };
 		92605505266F081C006BB51A /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 92605504266F081C006BB51A /* .gitattributes */; };
@@ -48,6 +52,10 @@
 
 /* Begin PBXFileReference section */
 		9205F38E266E43C0007BE24F /* InventoryTaking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTaking.swift; sourceTree = "<group>"; };
+		92114B8A267C92FB00557EC9 /* ImgePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgePicker.swift; sourceTree = "<group>"; };
+		9228FC5B267D377B006CB3BA /* InventoryHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHistory.swift; sourceTree = "<group>"; };
+		9228FC60267D3804006CB3BA /* InventoryLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryLog.swift; sourceTree = "<group>"; };
+		9228FC65267D38E9006CB3BA /* InventoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItem.swift; sourceTree = "<group>"; };
 		926054E3266EFD4B006BB51A /* ButtonWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithImage.swift; sourceTree = "<group>"; };
 		926054EB266F0274006BB51A /* CreateProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProperty.swift; sourceTree = "<group>"; };
 		92605504266F081C006BB51A /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 				CC58CF9A266E2982001D49CC /* SearchBar.swift */,
 				926054E3266EFD4B006BB51A /* ButtonWithImage.swift */,
 				CC58CFB0266FB63B001D49CC /* TextArea.swift */,
+				92114B8A267C92FB00557EC9 /* ImgePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -184,6 +193,7 @@
 				9205F38E266E43C0007BE24F /* InventoryTaking.swift */,
 				926054EB266F0274006BB51A /* CreateProperty.swift */,
 				CC58CFA1266E5A55001D49CC /* EditProperty.swift */,
+				9228FC5B267D377B006CB3BA /* InventoryHistory.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				CC58CF96266E1B75001D49CC /* Property.swift */,
+				9228FC60267D3804006CB3BA /* InventoryLog.swift */,
+				9228FC65267D38E9006CB3BA /* InventoryItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,7 +349,9 @@
 				CC58CFA2266E5A55001D49CC /* EditProperty.swift in Sources */,
 				CC58CF65266B8100001D49CC /* ContentView.swift in Sources */,
 				926054E4266EFD4B006BB51A /* ButtonWithImage.swift in Sources */,
+				9228FC66267D38E9006CB3BA /* InventoryItem.swift in Sources */,
 				CC58CF99266E1DD7001D49CC /* PropertyDetail.swift in Sources */,
+				92114B8B267C92FB00557EC9 /* ImgePicker.swift in Sources */,
 				CC58CF8F266D0509001D49CC /* ListProperty.swift in Sources */,
 				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
 				CC58CFB1266FB63B001D49CC /* TextArea.swift in Sources */,
@@ -346,6 +360,8 @@
 				CC58CF99266E1DD7001D49CC /* PropertyDetail.swift in Sources */,
 				CC58CF8F266D0509001D49CC /* ListProperty.swift in Sources */,
 				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
+				9228FC61267D3804006CB3BA /* InventoryLog.swift in Sources */,
+				9228FC5C267D377B006CB3BA /* InventoryHistory.swift in Sources */,
 				CC58CF9B266E2982001D49CC /* SearchBar.swift in Sources */,
 				CC58CFB3266FCB1A001D49CC /* ListPropertyRow.swift in Sources */,
 			);
