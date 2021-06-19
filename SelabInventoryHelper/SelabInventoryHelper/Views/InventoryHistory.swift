@@ -25,14 +25,19 @@ struct InventoryHistory: View {
                         Text("未清點：\(log.getUncheckedItemsCount())")
                     }
                     .padding(.leading, 10)
-                    .padding(.bottom, 10)
+                    .padding(.vertical, 10)
                 })
+            Spacer()
         }
+        .navigationTitle("盤點紀錄")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct InventoryHistory_Previews: PreviewProvider {
     static var previews: some View {
-        InventoryHistory(logs: [InventoryLog(name: "盤點紀錄#2021/06/18:18:30:13", inventoryItems: [InventoryItem(name: "電腦一台", id: "3345-4567hfgh-24234", isChecked: true), InventoryItem(name: "網卡一張", id: "3345-4567hfgh-2546234", isChecked: false)]), InventoryLog(name: "盤點紀錄#2021/06/18:30:35:37", inventoryItems: [InventoryItem(name: "電腦一台", id: "3345-4567hfgh-24234", isChecked: true), InventoryItem(name: "網卡一張", id: "3345-4567hfgh-2546234", isChecked: false)])])
-    }
+        NavigationView{
+            InventoryHistory(logs: [InventoryLog(name: "盤點紀錄#2021/06/18:18:30:13", inventoryItems: [InventoryItem(name: "電腦一台", id: "3345-4567hfgh-24234", isChecked: true), InventoryItem(name: "網卡一張", id: "3345-4567hfgh-2546234", isChecked: false)]), InventoryLog(name: "盤點紀錄#2021/06/18:30:35:37", inventoryItems: [InventoryItem(name: "電腦一台", id: "3345-4567hfgh-24234", isChecked: true), InventoryItem(name: "網卡一張", id: "3345-4567hfgh-2546234", isChecked: false)])])
+            }
+        }
 }
