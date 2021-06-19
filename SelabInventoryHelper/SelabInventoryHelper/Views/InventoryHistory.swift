@@ -15,18 +15,20 @@ struct InventoryHistory: View {
         VStack (alignment: .leading){
             SearchBar(searchText: $searchText)
                 .padding(.bottom, 15)
-            
-                ForEach(logs, id: \.name, content: {
-                    (log) in
+            List(logs, id: \.name) { (log) in
+                ScrollView {
                     VStack (alignment: .leading){
                         Text(log.name)
+                            .fontWeight(.bold)
+                            .padding(.bottom, 2)
                         Text("財產總數：\(log.getPropertiesCount())")
                         Text("已清點：\(log.getCheckedItemsCount())")
                         Text("未清點：\(log.getUncheckedItemsCount())")
                     }
                     .padding(.leading, 10)
                     .padding(.vertical, 10)
-                })
+                }
+            }
             Spacer()
         }
         .navigationTitle("盤點紀錄")
