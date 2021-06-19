@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import FirebaseStorage
+import SwiftUI
 
 class PropertyRepository: ObservableObject {
     let db = Firestore.firestore()
@@ -15,6 +16,8 @@ class PropertyRepository: ObservableObject {
     func save(property: Property) -> String? {
         var documentId:String?
         do {
+            saveImages(propertyId: property.identify, images: property.images)
+            property.imageIds = obtainImageIds(propertyId: property.identify, count: property.images.count)
             let propertyDto = PropertyDtoMapper.domainToDto(property: property)
             let documentReference = try
                 db.collection("properties").addDocument(from: propertyDto)
@@ -84,5 +87,37 @@ class PropertyRepository: ObservableObject {
         print("documentId = \(documentId!)")
         
         return documentId
+    }
+    
+    func saveImages(propertyId: String, images: [UIImage]) {
+        let storageRef = FirebaseStorage.Storage.storage().reference().child("propertyImages")
+        for (index, image) in images.enumerated() {
+            let imageRef = storageRef.child("\(propertyId)-\(index).png")
+            let imageData = image.pngData()!
+            _ = imageRef.putData(imageData, metadata: nil) { (metadata, error) in
+                guard metadata != nil else {
+                    return
+                }
+//                imageRef.downloadURL{ (url, error) in
+//                    guard let downloadURL = url else {
+//                        return
+//                    }
+//                }
+            }
+        }
+    }
+    
+    func obtainImageIds(propertyId: String, count: Int) -> [String] {
+        var ids = [String]()
+        for index in 0..<count {
+            ids.append("\(propertyId)-\(index)")
+        }
+        return ids
+    }
+}
+
+struct PropertyRepository_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct CreatePropertyManually: View {
     @ObservedObject var viewModel: ViewModel
-    @State private var property: Property = Property()
+    @StateObject private var property: Property = Property()
     @State private var showingSaveAlert: Bool = false
     @State var imgIndex = 0
-    @State private var images = [UIImage]()
+//    @State private var images = [UIImage]()
     @State private var isShowingImagePicker = false
     @State private var inputImage: UIImage?
     
@@ -28,10 +28,10 @@ struct CreatePropertyManually: View {
                 TextField("財產描述", text: $property.description)
                     .padding(.vertical, 10)
                 HStack {
-                    if (!images.isEmpty) {
-                        ImageSlider(index: $imgIndex.animation(), maxIndex: images.count - 1) {
-                            ForEach(images.indices, id: \.self) { index in
-                                (Image(uiImage: images[index]))
+                    if (!property.images.isEmpty) {
+                        ImageSlider(index: $imgIndex.animation(), maxIndex: property.images.count - 1) {
+                            ForEach(property.images.indices, id: \.self) { index in
+                                (Image(uiImage: property.images[index]))
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                             }
@@ -76,7 +76,7 @@ struct CreatePropertyManually: View {
                         message: Text(viewModel.message),
                         dismissButton: .default(Text("確定"), action: {
                             if viewModel.operationSuccess {
-                                property = Property()
+//                                property = Property()
                             }
                         })
                     )
@@ -92,7 +92,7 @@ struct CreatePropertyManually: View {
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
-        images.append(inputImage)
+        self.property.images.append(inputImage)
     }
 }
 
