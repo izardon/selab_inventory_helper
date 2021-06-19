@@ -7,6 +7,7 @@ target 'SelabInventoryHelper' do
 
   # Pods for SelabInventoryHelper
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   pod 'FirebaseFirestoreSwift', '> 7.0-beta'
 
   target 'SelabInventoryHelperTests' do
