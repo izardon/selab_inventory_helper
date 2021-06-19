@@ -1,25 +1,26 @@
 //
-//  Inventory.swift
+//  PropertyDto.swift
 //  SelabInventoryHelper
 //
-//  Created by 詹昆宬 on 2021/6/7.
+//  Created by 王方顯 on 19/06/2021.
 //
 
 import Foundation
-import SwiftUI
+import FirebaseFirestoreSwift
 
-class Property: ObservableObject {
+class PropertyDto: Codable {
+    @DocumentID var id: String?
     var identify = ""
     var name: String = ""
     var location: String = ""
     var description: String = ""
     var isScrapped: Bool = false
-    @Published var images = [UIImage]()
     var imageIds = [String]()
     var createdDate: Date = Date()
     
     init(identify: String, name: String, location: String, description: String, isScrapped: Bool, imageIds: [String]) {
         self.identify = identify
+        self.id = identify
         self.name = name
         self.location = location
         self.description = description
@@ -28,10 +29,6 @@ class Property: ObservableObject {
     }
     
     init() {}
-    
-    func addImageIds(ids: [String]) {
-        imageIds.append(contentsOf: ids)
-    }
     
     func getCreatedDate() -> String {
         let formatter = DateFormatter()

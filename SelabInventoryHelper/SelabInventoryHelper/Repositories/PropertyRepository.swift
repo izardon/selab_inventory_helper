@@ -15,8 +15,9 @@ class PropertyRepository: ObservableObject {
     func save(property: Property) -> String? {
         var documentId:String?
         do {
+            let propertyDto = PropertyDtoMapper.domainToDto(property: property)
             let documentReference = try
-                db.collection("properties").addDocument(from: property)
+                db.collection("properties").addDocument(from: propertyDto)
             documentId = documentReference.documentID
         } catch {
             print(error)
@@ -33,8 +34,9 @@ class PropertyRepository: ObservableObject {
             
             var properties = [Property]()
             for document in documents{
-                if let property = try? document.data(as: Property.self) {
-                    properties.append(property)
+                if let propertyDto = try? document.data(as: PropertyDto.self) {
+                    let selectedProperty = PropertyDtoMapper.dtoToDomain(propertyDto: propertyDto)
+                    properties.append(selectedProperty)
                 }
             }
             completion(properties)
@@ -45,16 +47,20 @@ class PropertyRepository: ObservableObject {
         var property = Property()
         db.collection("properties").document(propertyId).getDocument { (document, error) in
             if let document = document, document.exists {
-                property = try! document.data(as: Property.self)!
+                if let propertyDto = try? document.data(as: PropertyDto.self) {
+                    let selectedProperty = PropertyDtoMapper.dtoToDomain(propertyDto: propertyDto)
+                    property = selectedProperty
+                }
             }
             completion(property)
         }
     }
     
     func update(property: Property) -> String? {
-        var documentId:String? = property.id!
+        let propertyDto = PropertyDtoMapper.domainToDto(property: property)
+        var documentId:String? = propertyDto.id!
         do {
-            try db.collection("properties").document(documentId!).setData(from: property)
+            try db.collection("properties").document(documentId!).setData(from: propertyDto)
         }
         catch {
             print("Error updating document: \(error)")
@@ -65,7 +71,8 @@ class PropertyRepository: ObservableObject {
     }
     
     func delete(property: Property) -> String? {
-        var documentId:String? = property.id!
+        let propertyDto = PropertyDtoMapper.domainToDto(property: property)
+        var documentId:String? = propertyDto.id!
         db.collection("properties").document(documentId!).delete() { error in
             if let error = error {
                 print("Error removing document: \(error)")

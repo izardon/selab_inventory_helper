@@ -113,6 +113,6 @@ struct ListPropertyRow: View {
 
 struct ListInUsePropertyView_Previews: PreviewProvider {
     static var previews: some View {
-        ListPropertyRow(viewModel: ListProperty.ViewModel(), property: Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡", isScrapped: false), isScrapped: false)
+        ListPropertyRow(viewModel: ListProperty.ViewModel(), property: Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡", isScrapped: false, imageIds: [String]()), isScrapped: false)
     }
 }
