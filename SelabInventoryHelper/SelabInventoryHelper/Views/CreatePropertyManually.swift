@@ -12,7 +12,7 @@ struct CreatePropertyManually: View {
     @State private var property: Property = Property()
     @State private var showingSaveAlert: Bool = false
     @State var imgIndex = 0
-    @State private var images = []
+    @State private var images = [UIImage]()
     @State private var isShowingImagePicker = false
     @State private var inputImage: UIImage?
     
@@ -31,7 +31,7 @@ struct CreatePropertyManually: View {
                     if (!images.isEmpty) {
                         ImageSlider(index: $imgIndex.animation(), maxIndex: images.count - 1) {
                             ForEach(images.indices, id: \.self) { index in
-                                (images[index] as! Image)
+                                (Image(uiImage: images[index]))
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                             }
@@ -92,7 +92,7 @@ struct CreatePropertyManually: View {
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
-        images.append(Image(uiImage: inputImage))
+        images.append(inputImage)
     }
 }
 
