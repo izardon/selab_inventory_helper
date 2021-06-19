@@ -11,6 +11,10 @@ struct CreatePropertyManually: View {
     @ObservedObject var viewModel: ViewModel
     @State private var property: Property = Property()
     @State private var showingSaveAlert: Bool = false
+    @State var imgIndex = 0
+    @State private var images = []
+    @State private var isShowingImagePicker = false
+    @State private var inputImage: UIImage?
     
     var body: some View {
         VStack {
@@ -23,9 +27,34 @@ struct CreatePropertyManually: View {
                     .padding(.vertical, 10)
                 TextField("財產描述", text: $property.description)
                     .padding(.vertical, 10)
-                Image("inventory")
-                    .resizable()
-                    .scaledToFill()
+                HStack {
+                    if (!images.isEmpty) {
+                        ImageSlider(index: $imgIndex.animation(), maxIndex: images.count - 1) {
+                            ForEach(images.indices, id: \.self) { index in
+                                (images[index] as! Image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                        .aspectRatio(4/3, contentMode: .fit)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .shadow(radius: 5)
+                    } else {
+                        Text("Click icon to uplad an image")
+                            .foregroundColor(.gray)
+                    }
+                    Button(action: {
+                        self.isShowingImagePicker = true
+                    }, label: {
+                        Image(systemName: "plus.square.on.square")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50, alignment: .trailing)
+                            .foregroundColor(.blue)
+                    })
+                    .padding()
+                }
                 Button(action: {
                     viewModel.saveProperty(property: property)
                     showingSaveAlert = true
@@ -56,6 +85,14 @@ struct CreatePropertyManually: View {
                 .cornerRadius(20)
             }
         }
+        .sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage, content: {
+            ImagePicker(image: self.$inputImage)
+        })
+    }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        images.append(Image(uiImage: inputImage))
     }
 }
 
