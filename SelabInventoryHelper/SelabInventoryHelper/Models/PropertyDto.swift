@@ -18,9 +18,9 @@ class PropertyDto: Codable {
     var imageIds = [String]()
     var createdDate: Date = Date()
     
-    init(identify: String, name: String, location: String, description: String, isScrapped: Bool, imageIds: [String]) {
+    init(documentId: String, identify: String, name: String, location: String, description: String, isScrapped: Bool, imageIds: [String]) {
+        self.id = documentId
         self.identify = identify
-        self.id = identify
         self.name = name
         self.location = location
         self.description = description

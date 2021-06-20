@@ -9,10 +9,10 @@ import Foundation
 
 class PropertyDtoMapper {
     static func domainToDto(property: Property) -> PropertyDto {
-        return PropertyDto(identify: property.identify, name: property.name, location: property.location, description: property.description, isScrapped: property.isScrapped, imageIds: property.imageIds)
+        return PropertyDto(documentId: property.documentId, identify: property.identify, name: property.name, location: property.location, description: property.description, isScrapped: property.isScrapped, imageIds: property.imageIds)
     }
     
     static func dtoToDomain(propertyDto: PropertyDto) -> Property {
-        return Property(identify: propertyDto.identify, name: propertyDto.name, location: propertyDto.location, description: propertyDto.description, isScrapped: propertyDto.isScrapped, imageIds: propertyDto.imageIds)
+        return Property(documentId: propertyDto.id!, identify: propertyDto.identify, name: propertyDto.name, location: propertyDto.location, description: propertyDto.description, isScrapped: propertyDto.isScrapped, imageIds: propertyDto.imageIds)
     }
 }

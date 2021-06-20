@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 class Property: ObservableObject {
+    var documentId: String = ""
     var identify = ""
     var name: String = ""
     var location: String = ""
@@ -18,7 +19,8 @@ class Property: ObservableObject {
     var imageIds = [String]()
     var createdDate: Date = Date()
     
-    init(identify: String, name: String, location: String, description: String, isScrapped: Bool, imageIds: [String]) {
+    init(documentId: String, identify: String, name: String, location: String, description: String, isScrapped: Bool, imageIds: [String]) {
+        self.documentId = documentId
         self.identify = identify
         self.name = name
         self.location = location
@@ -38,4 +40,5 @@ class Property: ObservableObject {
         formatter.dateFormat = "HH:mm E, d MMM y"
         return formatter.string(from: createdDate)
     }
+    
 }
