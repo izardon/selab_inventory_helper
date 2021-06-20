@@ -35,27 +35,29 @@ struct PropertyDetail: View {
                 Text("財產描述：\(property.description)")
                     .padding(.vertical, 10)
                 
-                HStack {
-                    ImageSlider(index: $imgIndex.animation(), maxIndex: property.images.count - 1) {
-                        ForEach(0..<property.images.count, id: \.self) { idx in
-                            Image(uiImage: property.images[idx])
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
+                if(!property.images.isEmpty) {
+                    HStack {
+                        ImageSlider(index: $imgIndex.animation(), maxIndex: property.images.count - 1) {
+                            ForEach(0..<property.images.count, id: \.self) { idx in
+                                Image(uiImage: property.images[idx])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
                         }
+                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                        .aspectRatio(4/3, contentMode: .fit)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .shadow(radius: 5)
                     }
-                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-                    .aspectRatio(4/3, contentMode: .fit)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .shadow(radius: 5)
+                    .frame(
+                        minWidth: 0,
+                        maxWidth: .infinity,
+                        minHeight: 0,
+                        maxHeight: .infinity,
+                        alignment: .center
+                    )
+                    .padding(10)
                 }
-                .frame(
-                    minWidth: 0,
-                    maxWidth: .infinity,
-                    minHeight: 0,
-                    maxHeight: .infinity,
-                    alignment: .center
-                )
-                .padding(10)
             }
             .navigationTitle("View")
             .navigationBarTitleDisplayMode(.inline)

@@ -10,15 +10,16 @@ import SwiftUI
 
 struct EditProperty: View {
     @ObservedObject var viewModel: ViewModel
-    
-    @State public var property: Property
+    @StateObject public var property: Property
     @State private var imgIndex = 0
-    @State private var shouldPresentImagePicker = false
-    @State private var shouldPresentActionScheet = false
-    @State private var shouldPresentCamera = false
-    @State private var images = [Image("testImg"), Image("testImg2")]
-    @State private var uploadImage: Image? = Image("testImg")
+//    @State private var shouldPresentImagePicker = false
+//    @State private var shouldPresentActionScheet = false
+//    @State private var shouldPresentCamera = false
+//    @State private var images = [Image("testImg"), Image("testImg2")]
+//    @State private var uploadImage: Image? = Image("testImg")
     @State private var showingSaveAlert: Bool = false
+    @State private var isShowingImagePicker: Bool = false
+    @State private var inputImage: UIImage?
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -39,29 +40,56 @@ struct EditProperty: View {
                     .padding(.vertical, 10)
                 
                 HStack {
-                    ImageSlider(index: $imgIndex.animation(), maxIndex: images.count - 1) {
-                        ForEach(0..<images.count, id: \.self) { idx in
-                            images[idx]
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .onTapGesture { self.shouldPresentActionScheet = true }
+                    if (!property.images.isEmpty) {
+                        ImageSlider(index: $imgIndex.animation(), maxIndex: property.images.count - 1) {
+                            ForEach(property.images.indices, id: \.self) { index in
+                                (Image(uiImage: property.images[index]))
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
                         }
+                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                        .aspectRatio(4/3, contentMode: .fit)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .shadow(radius: 5)
+                    } else {
+                        Text("Click icon to uplad an image")
+                            .foregroundColor(.gray)
                     }
-                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-                    .aspectRatio(4/3, contentMode: .fit)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .shadow(radius: 5)
-                    .sheet(isPresented: $shouldPresentImagePicker) {
-                        SUImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, image: self.$uploadImage, images: self.$images, isPresented: self.$shouldPresentImagePicker)
-                    }.actionSheet(isPresented: $shouldPresentActionScheet) { () -> ActionSheet in
-                        ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
-                            self.shouldPresentImagePicker = true
-                            self.shouldPresentCamera = true
-                        }), ActionSheet.Button.default(Text("Photo Library"), action: {
-                            self.shouldPresentImagePicker = true
-                            self.shouldPresentCamera = false
-                        }), ActionSheet.Button.cancel()])
-                    }
+                    Button(action: {
+                        self.isShowingImagePicker = true
+                    }, label: {
+                        Image(systemName: "plus.square.on.square")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50, alignment: .trailing)
+                            .foregroundColor(.blue)
+                    })
+                    .padding()
+                    
+                    //                    ImageSlider(index: $imgIndex.animation(), maxIndex: images.count - 1) {
+                    //                        ForEach(0..<images.count, id: \.self) { idx in
+                    //                            images[idx]
+                    //                                .resizable()
+                    //                                .aspectRatio(contentMode: .fit)
+                    //                                .onTapGesture { self.shouldPresentActionScheet = true }
+                    //                        }
+                    //                    }
+                    //                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                    //                    .aspectRatio(4/3, contentMode: .fit)
+                    //                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    //                    .shadow(radius: 5)
+                    //                    .sheet(isPresented: $shouldPresentImagePicker) {
+                    //                        SUImagePicker(sourceType: self.shouldPresentCamera ? .camera : .photoLibrary, image: self.$uploadImage, images: self.$images, isPresented: self.$shouldPresentImagePicker)
+                    //                    }.actionSheet(isPresented: $shouldPresentActionScheet) { () -> ActionSheet in
+                    //                        ActionSheet(title: Text("Choose mode"), message: Text("Please choose your preferred mode to set your profile image"), buttons: [ActionSheet.Button.default(Text("Camera"), action: {
+                    //                            self.shouldPresentImagePicker = true
+                    //                            self.shouldPresentCamera = true
+                    //                        }), ActionSheet.Button.default(Text("Photo Library"), action: {
+                    //                            self.shouldPresentImagePicker = true
+                    //                            self.shouldPresentCamera = false
+                    //                        }), ActionSheet.Button.cancel()])
+                    //                    }
                     
                 }
                 .frame(
@@ -102,5 +130,13 @@ struct EditProperty: View {
         }
         .navigationTitle("Edit")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage, content: {
+            ImagePicker(image: self.$inputImage)
+        })
+    }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        self.property.images.append(inputImage)
     }
 }
