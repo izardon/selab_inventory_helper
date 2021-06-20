@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CreateProperty: View {
-    @State private var selectedTab: Int = 0
+    @State var selectedTab: Int = 0
+    @State private var property: Property = Property()
     
     var body: some View {
         VStack {
@@ -19,9 +20,10 @@ struct CreateProperty: View {
             .pickerStyle(SegmentedPickerStyle())
             
             switch(selectedTab) {
-            case 0: Color.yellow
-                .ignoresSafeArea()
-            case 1: CreatePropertyManually(viewModel: CreatePropertyManually.ViewModel())
+            case 0:
+                BarcodeScanner(selectedTab: $selectedTab, property: $property)
+            case 1:
+                CreatePropertyManually(viewModel: CreatePropertyManually.ViewModel(), property: $property)
             default:
                 Color.red
                     .ignoresSafeArea()

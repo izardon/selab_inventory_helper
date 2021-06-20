@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreatePropertyManually: View {
     @ObservedObject var viewModel: ViewModel
-    @State private var property: Property = Property()
+    @Binding var property: Property
     @State private var showingSaveAlert: Bool = false
     
     var body: some View {
@@ -61,6 +61,6 @@ struct CreatePropertyManually: View {
 
 struct CreatePropertyManually_Previews: PreviewProvider {
     static var previews: some View {
-        CreatePropertyManually(viewModel: CreatePropertyManually.ViewModel())
+        CreatePropertyManually(viewModel: CreatePropertyManually.ViewModel(), property: .constant(Property()))
     }
 }
