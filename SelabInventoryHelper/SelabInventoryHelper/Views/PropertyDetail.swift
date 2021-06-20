@@ -13,7 +13,7 @@ struct PropertyDetail: View {
     
     @State private var imgIndex = 0
     @State private var isEditing = false
-    @State private var images = [Image("testImg"), Image("testImg2")]
+//    @State private var images = [Image("testImg"), Image("testImg2")]
     
     var btnEdit : some View {
         NavigationLink(destination: EditProperty(viewModel: EditProperty.ViewModel(), property: property), label: {
@@ -36,9 +36,9 @@ struct PropertyDetail: View {
                     .padding(.vertical, 10)
                 
                 HStack {
-                    ImageSlider(index: $imgIndex.animation(), maxIndex: images.count - 1) {
-                        ForEach(0..<images.count, id: \.self) { idx in
-                            images[idx]
+                    ImageSlider(index: $imgIndex.animation(), maxIndex: property.images.count - 1) {
+                        ForEach(0..<property.images.count, id: \.self) { idx in
+                            Image(uiImage: property.images[idx])
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                         }

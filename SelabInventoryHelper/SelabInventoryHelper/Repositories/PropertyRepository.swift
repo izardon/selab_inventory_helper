@@ -39,6 +39,11 @@ class PropertyRepository: ObservableObject {
             for document in documents{
                 if let propertyDto = try? document.data(as: PropertyDto.self) {
                     let selectedProperty = PropertyDtoMapper.dtoToDomain(propertyDto: propertyDto)
+//                    self.loadImageFrom(imageIds: selectedProperty.imageIds, completion: { images in
+//                        DispatchQueue.main.async {
+//                            selectedProperty.images = images
+//                        }
+//                    })
                     properties.append(selectedProperty)
                 }
             }
@@ -106,6 +111,45 @@ class PropertyRepository: ObservableObject {
             }
         }
     }
+    
+    func loadImages(properties: [Property]) {
+        let storageRef = FirebaseStorage.Storage.storage().reference().child("propertyImages")
+        for (property) in properties {
+            for (imageId) in property.imageIds {
+                print("fetching \(imageId).png...")
+                let imageRef = storageRef.child("\(imageId).png")
+                imageRef.getData(maxSize: 1024 * 1024 * 1024, completion: {data, error in
+                    if error != nil {
+                        print("failed to fetch image!")
+                        print(error.debugDescription)
+                    } else {
+                        property.images.append(UIImage(data: data!)!)
+                        print("fetch success")
+                    }
+                })
+            }
+        }
+    }
+    
+//    func loadImages(properties: [Property], completion: @escaping ([Property]) -> ()) {
+//        let storageRef = FirebaseStorage.Storage.storage().reference().child("propertyImages")
+//        for (property) in properties {
+//            for (imageId) in property.imageIds {
+//                print("fetching \(imageId).png...")
+//                let imageRef = storageRef.child("\(imageId).png")
+//                imageRef.getData(maxSize: 1024 * 1024 * 1024, completion: {data, error in
+//                    if error != nil {
+//                        print("failed to fetch image!")
+//                        print(error.debugDescription)
+//                    } else {
+//                        property.images.append(UIImage(data: data!)!)
+//                        print("fetch success")
+//                    }
+//                })
+//            }
+//        }
+//        completion(properties)
+//    }
     
     func obtainImageIds(propertyId: String, count: Int) -> [String] {
         var ids = [String]()
