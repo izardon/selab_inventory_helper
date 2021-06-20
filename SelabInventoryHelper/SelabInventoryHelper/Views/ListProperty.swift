@@ -34,7 +34,6 @@ struct ListProperty: View {
                         if property.isScrapped == isScrapped && (searchText.isEmpty ? true : property.identify.contains(searchText))  {
                             ListPropertyRow(viewModel: viewModel, property: property, isScrapped: isScrapped)
                                 .fixedSize(horizontal: false, vertical: true)
-                            
                         }
                     }
                 }
@@ -42,6 +41,7 @@ struct ListProperty: View {
                     self.viewModel.loadProperties()
                 })
                 .listStyle(GroupedListStyle())
+                
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)

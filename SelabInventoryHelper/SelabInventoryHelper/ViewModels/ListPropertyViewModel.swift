@@ -31,5 +31,11 @@ extension ListProperty {
                 self.properties = self.properties.filter { $0.identify != property.identify }
             }
         }
+        
+        func updateProperty(property: Property) {
+            if repo.update(property: property) != nil {
+                // do nothing
+            }
+        }
     }
 }

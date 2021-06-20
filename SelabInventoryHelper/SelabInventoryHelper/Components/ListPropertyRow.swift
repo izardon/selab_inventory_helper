@@ -45,7 +45,7 @@ struct ListPropertyRow: View {
                 
                 Spacer()
                 
-                if isScrapped {
+                if property.isScrapped {
                     VStack {
                         Spacer()
                         Image(systemName: "tray.and.arrow.up")
@@ -61,6 +61,8 @@ struct ListPropertyRow: View {
                                     title: Text("取消報廢這筆財產？"),
                                     message: Text("可再報廢"),
                                     primaryButton: .destructive(Text("確定")) {
+                                        property.isScrapped = false
+                                        viewModel.updateProperty(property: property)
                                         print("tray.and.arrow.up...")
                                     },
                                     secondaryButton: .cancel(Text("取消"))
@@ -85,6 +87,8 @@ struct ListPropertyRow: View {
                                     title: Text("報廢這筆財產？"),
                                     message: Text("可再還原"),
                                     primaryButton: .destructive(Text("報廢")) {
+                                        property.isScrapped = true
+                                        viewModel.updateProperty(property: property)
                                         print("Archivebox...")
                                     },
                                     secondaryButton: .cancel(Text("取消"))
@@ -123,6 +127,6 @@ struct ListPropertyRow: View {
 
 struct ListInUsePropertyView_Previews: PreviewProvider {
     static var previews: some View {
-        ListPropertyRow(viewModel: ListProperty.ViewModel(), property: Property(identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡", isScrapped: false, imageIds: [String]()), isScrapped: false)
+        ListPropertyRow(viewModel: ListProperty.ViewModel(), property: Property(documentId: "A1233213", identify: "A123", name: "電腦", location: "宏裕科技大樓1421", description: "有顯卡", isScrapped: false, imageIds: [String]()), isScrapped: false)
     }
 }
