@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,8 @@
 		CCAB35732674F20900034E45 /* ListPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35722674F20900034E45 /* ListPropertyViewModel.swift */; };
 		CCAB35752675E1DB00034E45 /* CreatePropertyManuallyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35742675E1DB00034E45 /* CreatePropertyManuallyViewModel.swift */; };
 		CCAB35772675EDE800034E45 /* EditPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35762675EDE800034E45 /* EditPropertyViewModel.swift */; };
+		CCAB358C267E10B600034E45 /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = CCAB358B267E10B600034E45 /* CarBode */; };
+		CCAB358E267E159600034E45 /* BarcodeSanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB358D267E159600034E45 /* BarcodeSanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,7 @@
 		CCAB35722674F20900034E45 /* ListPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPropertyViewModel.swift; sourceTree = "<group>"; };
 		CCAB35742675E1DB00034E45 /* CreatePropertyManuallyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePropertyManuallyViewModel.swift; sourceTree = "<group>"; };
 		CCAB35762675EDE800034E45 /* EditPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPropertyViewModel.swift; sourceTree = "<group>"; };
+		CCAB358D267E159600034E45 /* BarcodeSanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeSanner.swift; sourceTree = "<group>"; };
 		D6A600C3AB65478DD2DA8B0E /* Pods-SelabInventoryHelperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelperTests.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelperTests/Pods-SelabInventoryHelperTests.release.xcconfig"; sourceTree = "<group>"; };
 		D6BA4E9A7E37C11EB5A48FEC /* Pods_SelabInventoryHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57E99CE48D16CDF10A24D7A /* Pods-SelabInventoryHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D236EA88BBC5993574612F8 /* Pods_SelabInventoryHelper.framework in Frameworks */,
+				CCAB358C267E10B600034E45 /* CarBode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +267,7 @@
 				926054EB266F0274006BB51A /* CreateProperty.swift */,
 				CC58CFA1266E5A55001D49CC /* EditProperty.swift */,
 				9228FC5B267D377B006CB3BA /* InventoryHistory.swift */,
+				CCAB358D267E159600034E45 /* BarcodeSanner.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +319,9 @@
 			dependencies = (
 			);
 			name = SelabInventoryHelper;
+			packageProductDependencies = (
+				CCAB358B267E10B600034E45 /* CarBode */,
+			);
 			productName = SelabInventoryHelper;
 			productReference = CC58CF5F266B8100001D49CC /* SelabInventoryHelper.app */;
 			productType = "com.apple.product-type.application";
@@ -388,6 +396,9 @@
 				Base,
 			);
 			mainGroup = CC58CF56266B8100001D49CC;
+			packageReferences = (
+				CCAB358A267E10B600034E45 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */,
+			);
 			productRefGroup = CC58CF60266B8100001D49CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -550,6 +561,7 @@
 				92114B8B267C92FB00557EC9 /* ImgePicker.swift in Sources */,
 				CC58CF8F266D0509001D49CC /* ListProperty.swift in Sources */,
 				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
+				CCAB358E267E159600034E45 /* BarcodeSanner.swift in Sources */,
 				CC58CFB1266FB63B001D49CC /* TextArea.swift in Sources */,
 				926054EC266F0274006BB51A /* CreateProperty.swift in Sources */,
 				9205F38F266E43C0007BE24F /* InventoryTaking.swift in Sources */,
@@ -653,7 +665,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -708,6 +720,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -887,6 +900,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCAB358A267E10B600034E45 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/heart/CarBode-Barcode-Scanner-For-SwiftUI";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCAB358B267E10B600034E45 /* CarBode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCAB358A267E10B600034E45 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */;
+			productName = CarBode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC58CF57266B8100001D49CC /* Project object */;
 }

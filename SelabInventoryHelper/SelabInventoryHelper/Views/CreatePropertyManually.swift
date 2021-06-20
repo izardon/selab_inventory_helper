@@ -9,10 +9,9 @@ import SwiftUI
 
 struct CreatePropertyManually: View {
     @ObservedObject var viewModel: ViewModel
-    @StateObject private var property: Property = Property()
+    @StateObject var property: Property
     @State private var showingSaveAlert: Bool = false
     @State var imgIndex = 0
-//    @State private var images = [UIImage]()
     @State private var isShowingImagePicker = false
     @State private var inputImage: UIImage?
     
@@ -98,6 +97,6 @@ struct CreatePropertyManually: View {
 
 struct CreatePropertyManually_Previews: PreviewProvider {
     static var previews: some View {
-        CreatePropertyManually(viewModel: CreatePropertyManually.ViewModel())
+        CreatePropertyManually(viewModel: CreatePropertyManually.ViewModel(), property: Property())
     }
 }
