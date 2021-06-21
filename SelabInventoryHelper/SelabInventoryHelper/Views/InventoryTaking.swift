@@ -19,7 +19,7 @@ struct InventoryTaking: View {
                     })
 
                 NavigationLink(
-                    destination: InventoryHistory(searchText: "", logs: self.fetchInventoryLogs()),
+                    destination: InventoryHistory(viewModel: InventoryHistory.ViewModel(), searchText: ""),
                     label: {
                         ButtonWithImage(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.width * 0.7,  text: "盤點紀錄", textSize: 26, image: "book", action: {})
                     })
@@ -28,10 +28,6 @@ struct InventoryTaking: View {
             .navigationBarHidden(true)
             .navigationBarTitleDisplayMode(.inline)
         }
-    }
-    
-    func fetchInventoryLogs () -> [InventoryLog] {
-        return [InventoryLog(documentId: "akjsdlas", name: "盤點紀錄#2021/06/18:18:30:13", inventoryItems: [InventoryItem(name: "電腦一台", id: "3345-4567hfgh-24234", isChecked: true), InventoryItem(name: "網卡一張", id: "3345-4567hfgh-2546234", isChecked: false)], isComplete: false), InventoryLog(documentId: "iuofdsf", name: "盤點紀錄#2021/06/18:30:35:37", inventoryItems: [InventoryItem(name: "電腦一台", id: "3345-4567hfgh-24234", isChecked: true), InventoryItem(name: "網卡一張", id: "3345-4567hfgh-2546234", isChecked: false)], isComplete: false)]
     }
 }
 

@@ -43,6 +43,22 @@ class InventoryLogRepository: ObservableObject {
         }
     }
     
+    func get (completion: @escaping ([InventoryLog]) -> ()) {
+        db.collection("inventoryLogs").getDocuments { snapshot, error in
+            guard let documents = snapshot?.documents else {
+                fatalError("error downloading documents")
+            }
+            var logs = [InventoryLog]()
+            for document in documents{
+                if let inventoryLogDto = try? document.data(as: InventoryLogDto.self) {
+                    let selectedLog = InventoryLogDtoMapper.dtoToDomain(inventoryLogDto: inventoryLogDto)
+                    logs.append(selectedLog)
+                }
+            }
+            completion(logs)
+        }
+    }
+    
     func update(inventoryLog: InventoryLog) -> String? {
         let inventoryLogDto = InventoryLogDtoMapper.domainToDto(inventoryLog: inventoryLog)
         var documentId:String? = inventoryLogDto.id!
