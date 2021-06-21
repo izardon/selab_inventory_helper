@@ -21,7 +21,7 @@ struct CreateProperty: View {
             
             switch(selectedTab) {
             case 0:
-                BarcodeScanner(selectedTab: $selectedTab, property: $property)
+                CreatePropertyBarcodeScanner(selectedTab: $selectedTab, property: $property)
             case 1:
                 CreatePropertyManually(viewModel: CreatePropertyManually.ViewModel(), property: property)
             default:

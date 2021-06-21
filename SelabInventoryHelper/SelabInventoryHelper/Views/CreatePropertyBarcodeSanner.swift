@@ -10,7 +10,7 @@ import SwiftUI
 import CarBode
 import AVFoundation //import to access barcode types you want to scan
 
-struct BarcodeScanner: View {
+struct CreatePropertyBarcodeScanner: View {
     @Binding var selectedTab: Int
     @Binding var property: Property
 

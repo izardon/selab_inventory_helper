@@ -24,8 +24,10 @@ struct InventoryTaking: View {
                         ButtonWithImage(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.width * 0.7,  text: "盤點紀錄", textSize: 26, image: "book", action: {})
                     })
             }
-            .navigationBarTitle("盤點財產")
-            .navigationBarHidden(true)        }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
     
     func fetchInventoryLogs () -> [InventoryLog] {

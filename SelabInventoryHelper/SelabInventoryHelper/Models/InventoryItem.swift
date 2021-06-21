@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct InventoryItem: Hashable {
-    let name: String
-    let id: String
-    let isChecked: Bool
+class InventoryItem: ObservableObject {
+    var name: String = ""
+    var id: String = ""
+    var isChecked: Bool = false
+    
+    init(name: String, id: String, isChecked: Bool) {
+        self.name = name
+        self.id = id
+        self.isChecked = isChecked
+    }
 }

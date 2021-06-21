@@ -50,6 +50,23 @@ class PropertyRepository {
         }
     }
     
+    func getAllAreNotScrapped (completion: @escaping ([Property]) -> ()) {
+        db.collection("properties").whereField("isScrapped", isEqualTo: false).getDocuments { snapshot, error in
+            guard let documents = snapshot?.documents else {
+                fatalError("error downloading documents")
+            }
+            
+            var properties = [Property]()
+            for document in documents{
+                if let propertyDto = try? document.data(as: PropertyDto.self) {
+                    let selectedProperty = PropertyDtoMapper.dtoToDomain(propertyDto: propertyDto)
+                    properties.append(selectedProperty)
+                }
+            }
+            completion(properties)
+        }
+    }
+    
     func getById(propertyId: String, completion: @escaping (Property) -> ()){
         var property = Property()
         db.collection("properties").document(propertyId).getDocument { (document, error) in

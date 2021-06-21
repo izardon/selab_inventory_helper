@@ -8,28 +8,49 @@
 import SwiftUI
 
 struct InventoryProperty: View {
+    @State var selectedTab: Int = 0
     @ObservedObject var viewModel: ViewModel
+    @Environment(\.presentationMode) var presentationMode
+    
+    var btnComplete : some View {
+        Button(
+            "完成盤點",
+            action: {
+                viewModel.inventoryLog.isComplete = true
+                viewModel.updateInventoryLog(inventoryLog: viewModel.inventoryLog)
+                self.presentationMode.wrappedValue.dismiss()
+            }
+        )
+    }
     
     var body: some View {
         VStack {
-            VStack (alignment: .leading){
-                List(viewModel.inventoryLog.inventoryItems, id: \.self) { (inventoryItem)  in
-                    ScrollView {
-                        HStack {
-                            Text(inventoryItem.id)
-                            Image(systemName: inventoryItem.isChecked ? "checkmark.square" : "square")
-                            Spacer()
-                        }
-                    }
-                }
-                .onAppear(perform: {
-                    self.viewModel.getUnCompleteOrAddNewInventoryLog()
-                })
-                Spacer()
+            Picker("", selection: $selectedTab) {
+                Text("條碼掃描").tag(0)
+                Text("盤點情況").tag(1)
             }
-            .navigationTitle("立即盤點")
-            .navigationBarTitleDisplayMode(.inline)
+            .pickerStyle(SegmentedPickerStyle())
+            
+            switch(selectedTab) {
+            case 0:
+                InventoryPropertyBarcodeScanner(viewModel: viewModel)
+            case 1:
+                ListInventoryProperty(viewModel: viewModel)
+            default:
+                Color.red
+                    .ignoresSafeArea()
+            }
         }
+        .onAppear(perform: {
+            self.viewModel.getUnCompleteOrAddNewInventoryLog()
+        })
+        .navigationTitle("立即盤點")
+        .navigationBarItems(trailing: btnComplete)
     }
 }
 
+struct InventoryProperty_Previews: PreviewProvider {
+    static var previews: some View {
+        InventoryProperty(viewModel: InventoryProperty.ViewModel())
+    }
+}

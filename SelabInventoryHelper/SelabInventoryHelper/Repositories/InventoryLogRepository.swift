@@ -42,4 +42,18 @@ class InventoryLogRepository: ObservableObject {
             completion(inventoryLogs)
         }
     }
+    
+    func update(inventoryLog: InventoryLog) -> String? {
+        let inventoryLogDto = InventoryLogDtoMapper.domainToDto(inventoryLog: inventoryLog)
+        var documentId:String? = inventoryLogDto.id!
+        do {
+            try db.collection("inventoryLogs").document(documentId!).setData(from: inventoryLogDto)
+        }
+        catch {
+            print("Error updating inventoryLog document: \(error)")
+            documentId = nil
+        }
+        
+        return documentId
+    }
 }
