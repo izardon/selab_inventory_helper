@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct InventoryItem {
+struct InventoryItem: Hashable {
     let name: String
     let id: String
     let isChecked: Bool

@@ -8,9 +8,8 @@
 import Foundation
 import Firebase
 import FirebaseStorage
-import SwiftUI
 
-class PropertyRepository: ObservableObject {
+class PropertyRepository {
     let db = Firestore.firestore()
     
     func save(property: Property) -> String? {
@@ -157,11 +156,5 @@ class PropertyRepository: ObservableObject {
             ids.append("\(propertyId)-\(index)")
         }
         return ids
-    }
-}
-
-struct PropertyRepository_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

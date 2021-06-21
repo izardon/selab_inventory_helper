@@ -21,7 +21,7 @@ extension ListProperty {
             repo.get() { [weak self] properties in
                 DispatchQueue.main.async {
                     self?.properties = properties
-                    self!.repo.loadImages(properties: self!.properties)
+//                    self!.repo.loadImages(properties: self!.properties)
                 }
             }
         }

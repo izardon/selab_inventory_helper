@@ -44,6 +44,13 @@
 		CCAB35772675EDE800034E45 /* EditPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35762675EDE800034E45 /* EditPropertyViewModel.swift */; };
 		CCAB358C267E10B600034E45 /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = CCAB358B267E10B600034E45 /* CarBode */; };
 		CCAB358E267E159600034E45 /* BarcodeSanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB358D267E159600034E45 /* BarcodeSanner.swift */; };
+		CCAB359226805BEE00034E45 /* InventoryProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB359126805BEE00034E45 /* InventoryProperty.swift */; };
+		CCAB359426805E8E00034E45 /* InventoryPropertyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB359326805E8E00034E45 /* InventoryPropertyViewModel.swift */; };
+		CCAB35962680AFF400034E45 /* InventoryLogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35952680AFF400034E45 /* InventoryLogRepository.swift */; };
+		CCAB35982680B0EE00034E45 /* InventoryLogDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35972680B0EE00034E45 /* InventoryLogDto.swift */; };
+		CCAB359A2680B1FC00034E45 /* InventoryItemDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35992680B1FC00034E45 /* InventoryItemDto.swift */; };
+		CCAB359C2680B29400034E45 /* InventoryLogDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB359B2680B29400034E45 /* InventoryLogDtoMapper.swift */; };
+		CCAB359E2680B2A300034E45 /* InventoryItemDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB359D2680B2A300034E45 /* InventoryItemDtoMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +116,13 @@
 		CCAB35742675E1DB00034E45 /* CreatePropertyManuallyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePropertyManuallyViewModel.swift; sourceTree = "<group>"; };
 		CCAB35762675EDE800034E45 /* EditPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPropertyViewModel.swift; sourceTree = "<group>"; };
 		CCAB358D267E159600034E45 /* BarcodeSanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeSanner.swift; sourceTree = "<group>"; };
+		CCAB359126805BEE00034E45 /* InventoryProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryProperty.swift; sourceTree = "<group>"; };
+		CCAB359326805E8E00034E45 /* InventoryPropertyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryPropertyViewModel.swift; sourceTree = "<group>"; };
+		CCAB35952680AFF400034E45 /* InventoryLogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryLogRepository.swift; sourceTree = "<group>"; };
+		CCAB35972680B0EE00034E45 /* InventoryLogDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryLogDto.swift; sourceTree = "<group>"; };
+		CCAB35992680B1FC00034E45 /* InventoryItemDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemDto.swift; sourceTree = "<group>"; };
+		CCAB359B2680B29400034E45 /* InventoryLogDtoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryLogDtoMapper.swift; sourceTree = "<group>"; };
+		CCAB359D2680B2A300034E45 /* InventoryItemDtoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemDtoMapper.swift; sourceTree = "<group>"; };
 		D6A600C3AB65478DD2DA8B0E /* Pods-SelabInventoryHelperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelperTests.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelperTests/Pods-SelabInventoryHelperTests.release.xcconfig"; sourceTree = "<group>"; };
 		D6BA4E9A7E37C11EB5A48FEC /* Pods_SelabInventoryHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57E99CE48D16CDF10A24D7A /* Pods-SelabInventoryHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				9297EC90267E2204009E2F1A /* PropertyDtoMapper.swift */,
+				CCAB359B2680B29400034E45 /* InventoryLogDtoMapper.swift */,
+				CCAB359D2680B2A300034E45 /* InventoryItemDtoMapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -268,6 +284,7 @@
 				CC58CFA1266E5A55001D49CC /* EditProperty.swift */,
 				9228FC5B267D377B006CB3BA /* InventoryHistory.swift */,
 				CCAB358D267E159600034E45 /* BarcodeSanner.swift */,
+				CCAB359126805BEE00034E45 /* InventoryProperty.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,6 +296,8 @@
 				9228FC60267D3804006CB3BA /* InventoryLog.swift */,
 				9228FC65267D38E9006CB3BA /* InventoryItem.swift */,
 				9297EC9A267E226A009E2F1A /* PropertyDto.swift */,
+				CCAB35972680B0EE00034E45 /* InventoryLogDto.swift */,
+				CCAB35992680B1FC00034E45 /* InventoryItemDto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				CCAB356F2674E5AC00034E45 /* PropertyRepository.swift */,
+				CCAB35952680AFF400034E45 /* InventoryLogRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -297,6 +317,7 @@
 				CCAB35722674F20900034E45 /* ListPropertyViewModel.swift */,
 				CCAB35742675E1DB00034E45 /* CreatePropertyManuallyViewModel.swift */,
 				CCAB35762675EDE800034E45 /* EditPropertyViewModel.swift */,
+				CCAB359326805E8E00034E45 /* InventoryPropertyViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -547,15 +568,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC58CF97266E1B75001D49CC /* Property.swift in Sources */,
+				CCAB359A2680B1FC00034E45 /* InventoryItemDto.swift in Sources */,
 				CCAB35732674F20900034E45 /* ListPropertyViewModel.swift in Sources */,
 				CC58CFA0266E50DB001D49CC /* ImageSlider.swift in Sources */,
+				CCAB35962680AFF400034E45 /* InventoryLogRepository.swift in Sources */,
 				CCAB356D2674E1A400034E45 /* AppDelegate.swift in Sources */,
 				CCAB35772675EDE800034E45 /* EditPropertyViewModel.swift in Sources */,
 				CC58CFA4266E7130001D49CC /* SUImagePicker.swift in Sources */,
 				92605526266F103A006BB51A /* CreatePropertyManually.swift in Sources */,
 				CC58CFA2266E5A55001D49CC /* EditProperty.swift in Sources */,
+				CCAB35982680B0EE00034E45 /* InventoryLogDto.swift in Sources */,
 				CC58CF65266B8100001D49CC /* ContentView.swift in Sources */,
 				926054E4266EFD4B006BB51A /* ButtonWithImage.swift in Sources */,
+				CCAB359E2680B2A300034E45 /* InventoryItemDtoMapper.swift in Sources */,
 				9228FC66267D38E9006CB3BA /* InventoryItem.swift in Sources */,
 				CC58CF99266E1DD7001D49CC /* PropertyDetail.swift in Sources */,
 				92114B8B267C92FB00557EC9 /* ImgePicker.swift in Sources */,
@@ -563,14 +588,17 @@
 				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
 				CCAB358E267E159600034E45 /* BarcodeSanner.swift in Sources */,
 				CC58CFB1266FB63B001D49CC /* TextArea.swift in Sources */,
+				CCAB359226805BEE00034E45 /* InventoryProperty.swift in Sources */,
 				926054EC266F0274006BB51A /* CreateProperty.swift in Sources */,
 				9205F38F266E43C0007BE24F /* InventoryTaking.swift in Sources */,
+				CCAB359426805E8E00034E45 /* InventoryPropertyViewModel.swift in Sources */,
 				CC58CF99266E1DD7001D49CC /* PropertyDetail.swift in Sources */,
 				CC58CF8F266D0509001D49CC /* ListProperty.swift in Sources */,
 				9297EC9B267E226A009E2F1A /* PropertyDto.swift in Sources */,
 				CCAB35702674E5AC00034E45 /* PropertyRepository.swift in Sources */,
 				CCAB35752675E1DB00034E45 /* CreatePropertyManuallyViewModel.swift in Sources */,
 				CC58CF63266B8100001D49CC /* SelabInventoryHelperApp.swift in Sources */,
+				CCAB359C2680B29400034E45 /* InventoryLogDtoMapper.swift in Sources */,
 				9297EC91267E2204009E2F1A /* PropertyDtoMapper.swift in Sources */,
 				9228FC61267D3804006CB3BA /* InventoryLog.swift in Sources */,
 				9228FC5C267D377B006CB3BA /* InventoryHistory.swift in Sources */,

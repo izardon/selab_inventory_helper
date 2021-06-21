@@ -7,9 +7,18 @@
 
 import Foundation
 
-struct InventoryLog {
-    let name: String
-    let inventoryItems: [InventoryItem]
+class InventoryLog: ObservableObject {
+    var documentId: String = ""
+    var name: String
+    var isComplete: Bool
+    var inventoryItems: [InventoryItem]
+    
+    init(documentId: String, name: String, inventoryItems: [InventoryItem], isComplete: Bool) {
+        self.documentId = documentId
+        self.name = name
+        self.isComplete = isComplete
+        self.inventoryItems = inventoryItems
+    }
     
     func getPropertiesCount () -> Int {
         return inventoryItems.count
