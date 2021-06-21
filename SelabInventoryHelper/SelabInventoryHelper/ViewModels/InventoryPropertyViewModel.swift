@@ -16,11 +16,11 @@ extension InventoryProperty {
         init() {
             self.propertyRepo = PropertyRepository()
             self.inventoryLogRepo = InventoryLogRepository()
-            self.inventoryLog = InventoryLog(documentId: "", name: "test", inventoryItems: [], isComplete: false)
+            self.inventoryLog = InventoryLog(documentId: "", name: "", inventoryItems: [], isComplete: false)
         }
         
         func getUnCompleteOrAddNewInventoryLog() {
-            self.inventoryLog = InventoryLog(documentId: "", name: "test", inventoryItems: [], isComplete: false)
+            self.inventoryLog = InventoryLog(documentId: "", name: "盤點紀錄#\(self.getNowFormateString())", inventoryItems: [], isComplete: false)
             
             inventoryLogRepo.getByComplete(isComplete: false) { [weak self] inventoryLogs in
                 DispatchQueue.main.async {
@@ -44,6 +44,13 @@ extension InventoryProperty {
         
         func updateInventoryLog(inventoryLog: InventoryLog) {
             inventoryLogRepo.update(inventoryLog: inventoryLog)
+        }
+        
+        func getNowFormateString() -> String {
+            let formatter = DateFormatter()
+            let formate = "yyyy-MM-dd HH:mm:ss"
+            formatter.dateFormat = formate
+            return formatter.string(from: Date())
         }
     }
 }
