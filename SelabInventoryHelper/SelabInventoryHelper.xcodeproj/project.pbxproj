@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EE12C8D06A5F8EEF86153E4 /* Pods_SelabInventoryHelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BA4E9A7E37C11EB5A48FEC /* Pods_SelabInventoryHelperTests.framework */; };
-		4D236EA88BBC5993574612F8 /* Pods_SelabInventoryHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA21DF02B1B80025ADC1AF8 /* Pods_SelabInventoryHelper.framework */; };
-		8CE17B84B03AF4023D495254 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D1DC72C8B6408613F2E760 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework */; };
+		55E43C3D2AC7DFC270B35558 /* Pods_SelabInventoryHelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20947BDA418E58AC6D5A6B0 /* Pods_SelabInventoryHelperTests.framework */; };
+		6BACEAD9F4773F61353157B7 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BFB820C0477D73587E2BEB /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework */; };
 		9205F38F266E43C0007BE24F /* InventoryTaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205F38E266E43C0007BE24F /* InventoryTaking.swift */; };
 		92114B8B267C92FB00557EC9 /* ImgePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92114B8A267C92FB00557EC9 /* ImgePicker.swift */; };
 		9228FC5C267D377B006CB3BA /* InventoryHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228FC5B267D377B006CB3BA /* InventoryHistory.swift */; };
@@ -56,6 +55,7 @@
 		CCAB359E2680B2A300034E45 /* InventoryItemDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB359D2680B2A300034E45 /* InventoryItemDtoMapper.swift */; };
 		CCAB35A02680CB2700034E45 /* InventoryPropertyBarCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB359F2680CB2700034E45 /* InventoryPropertyBarCodeScanner.swift */; };
 		CCAB35A22680CC9900034E45 /* InventoryProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB35A12680CC9900034E45 /* InventoryProperty.swift */; };
+		CCAB35A32681DAE900034E45 /* Pods_SelabInventoryHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4963819BF080574D9674A8B0 /* Pods_SelabInventoryHelper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,11 +76,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BE323931D29565BD78BCE6E /* Pods-SelabInventoryHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelperTests/Pods-SelabInventoryHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
-		279A910C1037879558597D2B /* Pods-SelabInventoryHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper.release.xcconfig"; sourceTree = "<group>"; };
-		43CE9B2CE42F2F22204BFFCC /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper-SelabInventoryHelperUITests/Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5AA00FCFF9BB4CF633A22AF6 /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper-SelabInventoryHelperUITests/Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		6AA21DF02B1B80025ADC1AF8 /* Pods_SelabInventoryHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05044AAF7EB92FAF255CB8FA /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper-SelabInventoryHelperUITests/Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig"; sourceTree = "<group>"; };
+		158EFAAF2856CB1CD7DFD7AD /* Pods-SelabInventoryHelperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelperTests.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelperTests/Pods-SelabInventoryHelperTests.release.xcconfig"; sourceTree = "<group>"; };
+		23C3CFBF6B5B221C1A7B8254 /* Pods-SelabInventoryHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper.release.xcconfig"; sourceTree = "<group>"; };
+		4451DB4E8AF7022CEBB6336C /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper-SelabInventoryHelperUITests/Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4963819BF080574D9674A8B0 /* Pods_SelabInventoryHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB0B6D6874E4569BC9AA9D0 /* Pods-SelabInventoryHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelperTests/Pods-SelabInventoryHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9205F38E266E43C0007BE24F /* InventoryTaking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTaking.swift; sourceTree = "<group>"; };
 		92114B8A267C92FB00557EC9 /* ImgePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgePicker.swift; sourceTree = "<group>"; };
 		9228FC5B267D377B006CB3BA /* InventoryHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHistory.swift; sourceTree = "<group>"; };
@@ -95,7 +96,8 @@
 		92D71CED2680FCB2006F4A59 /* InventoryHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHistoryViewModel.swift; sourceTree = "<group>"; };
 		92D71CF2268102A1006F4A59 /* InventoryHistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHistoryRow.swift; sourceTree = "<group>"; };
 		92D71CF72681032A006F4A59 /* InventoryLogDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryLogDetail.swift; sourceTree = "<group>"; };
-		C0D1DC72C8B6408613F2E760 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20947BDA418E58AC6D5A6B0 /* Pods_SelabInventoryHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC3A1F83D5D1B177A8F0AE0D /* Pods-SelabInventoryHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		CC58CF5F266B8100001D49CC /* SelabInventoryHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelabInventoryHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC58CF62266B8100001D49CC /* SelabInventoryHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelabInventoryHelperApp.swift; sourceTree = "<group>"; };
 		CC58CF64266B8100001D49CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,9 +135,7 @@
 		CCAB359D2680B2A300034E45 /* InventoryItemDtoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemDtoMapper.swift; sourceTree = "<group>"; };
 		CCAB359F2680CB2700034E45 /* InventoryPropertyBarCodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryPropertyBarCodeScanner.swift; sourceTree = "<group>"; };
 		CCAB35A12680CC9900034E45 /* InventoryProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryProperty.swift; sourceTree = "<group>"; };
-		D6A600C3AB65478DD2DA8B0E /* Pods-SelabInventoryHelperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelperTests.release.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelperTests/Pods-SelabInventoryHelperTests.release.xcconfig"; sourceTree = "<group>"; };
-		D6BA4E9A7E37C11EB5A48FEC /* Pods_SelabInventoryHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E57E99CE48D16CDF10A24D7A /* Pods-SelabInventoryHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelabInventoryHelper.debug.xcconfig"; path = "Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		D2BFB820C0477D73587E2BEB /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D236EA88BBC5993574612F8 /* Pods_SelabInventoryHelper.framework in Frameworks */,
 				CCAB358C267E10B600034E45 /* CarBode in Frameworks */,
+				CCAB35A32681DAE900034E45 /* Pods_SelabInventoryHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE12C8D06A5F8EEF86153E4 /* Pods_SelabInventoryHelperTests.framework in Frameworks */,
+				55E43C3D2AC7DFC270B35558 /* Pods_SelabInventoryHelperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CE17B84B03AF4023D495254 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework in Frameworks */,
+				6BACEAD9F4773F61353157B7 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,22 +196,22 @@
 		97B7E5E8AAD5C11D7CAD3C8A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E57E99CE48D16CDF10A24D7A /* Pods-SelabInventoryHelper.debug.xcconfig */,
-				279A910C1037879558597D2B /* Pods-SelabInventoryHelper.release.xcconfig */,
-				5AA00FCFF9BB4CF633A22AF6 /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig */,
-				43CE9B2CE42F2F22204BFFCC /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig */,
-				0BE323931D29565BD78BCE6E /* Pods-SelabInventoryHelperTests.debug.xcconfig */,
-				D6A600C3AB65478DD2DA8B0E /* Pods-SelabInventoryHelperTests.release.xcconfig */,
+				BC3A1F83D5D1B177A8F0AE0D /* Pods-SelabInventoryHelper.debug.xcconfig */,
+				23C3CFBF6B5B221C1A7B8254 /* Pods-SelabInventoryHelper.release.xcconfig */,
+				4451DB4E8AF7022CEBB6336C /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig */,
+				05044AAF7EB92FAF255CB8FA /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig */,
+				8DB0B6D6874E4569BC9AA9D0 /* Pods-SelabInventoryHelperTests.debug.xcconfig */,
+				158EFAAF2856CB1CD7DFD7AD /* Pods-SelabInventoryHelperTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		AA5D1A7A213D5A57ADBC543E /* Frameworks */ = {
+		CA84BB705C3A6762E50E64BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6AA21DF02B1B80025ADC1AF8 /* Pods_SelabInventoryHelper.framework */,
-				C0D1DC72C8B6408613F2E760 /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework */,
-				D6BA4E9A7E37C11EB5A48FEC /* Pods_SelabInventoryHelperTests.framework */,
+				4963819BF080574D9674A8B0 /* Pods_SelabInventoryHelper.framework */,
+				D2BFB820C0477D73587E2BEB /* Pods_SelabInventoryHelper_SelabInventoryHelperUITests.framework */,
+				B20947BDA418E58AC6D5A6B0 /* Pods_SelabInventoryHelperTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,7 +225,7 @@
 				CC58CF7E266B8101001D49CC /* SelabInventoryHelperUITests */,
 				CC58CF60266B8100001D49CC /* Products */,
 				97B7E5E8AAD5C11D7CAD3C8A /* Pods */,
-				AA5D1A7A213D5A57ADBC543E /* Frameworks */,
+				CA84BB705C3A6762E50E64BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -344,11 +344,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC58CF84266B8101001D49CC /* Build configuration list for PBXNativeTarget "SelabInventoryHelper" */;
 			buildPhases = (
-				B861019CB9FA7B6234041979 /* [CP] Check Pods Manifest.lock */,
+				81BA7E9F77C62CDD245119C6 /* [CP] Check Pods Manifest.lock */,
 				CC58CF5B266B8100001D49CC /* Sources */,
 				CC58CF5C266B8100001D49CC /* Frameworks */,
 				CC58CF5D266B8100001D49CC /* Resources */,
-				BB0E41B72BCB6C4A9309D9E5 /* [CP] Embed Pods Frameworks */,
+				808624E8F44CE93F809257A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -366,7 +366,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC58CF87266B8101001D49CC /* Build configuration list for PBXNativeTarget "SelabInventoryHelperTests" */;
 			buildPhases = (
-				A8EDD217B163AA5047E870B4 /* [CP] Check Pods Manifest.lock */,
+				96FB98C8D65DB9F6F1213D31 /* [CP] Check Pods Manifest.lock */,
 				CC58CF6C266B8101001D49CC /* Sources */,
 				CC58CF6D266B8101001D49CC /* Frameworks */,
 				CC58CF6E266B8101001D49CC /* Resources */,
@@ -385,11 +385,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC58CF8A266B8101001D49CC /* Build configuration list for PBXNativeTarget "SelabInventoryHelperUITests" */;
 			buildPhases = (
-				D42AE21C91DBEE3AD9703AEC /* [CP] Check Pods Manifest.lock */,
+				88431768EEC5A774F6464246 /* [CP] Check Pods Manifest.lock */,
 				CC58CF77266B8101001D49CC /* Sources */,
 				CC58CF78266B8101001D49CC /* Frameworks */,
 				CC58CF79266B8101001D49CC /* Resources */,
-				EF946AE191D6C73CC3914641 /* [CP] Embed Pods Frameworks */,
+				D123320B437085D9BED30EE4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -475,29 +475,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A8EDD217B163AA5047E870B4 /* [CP] Check Pods Manifest.lock */ = {
+		808624E8F44CE93F809257A4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SelabInventoryHelperTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B861019CB9FA7B6234041979 /* [CP] Check Pods Manifest.lock */ = {
+		81BA7E9F77C62CDD245119C6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -519,24 +514,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BB0E41B72BCB6C4A9309D9E5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SelabInventoryHelper/Pods-SelabInventoryHelper-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D42AE21C91DBEE3AD9703AEC /* [CP] Check Pods Manifest.lock */ = {
+		88431768EEC5A774F6464246 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -558,7 +536,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EF946AE191D6C73CC3914641 /* [CP] Embed Pods Frameworks */ = {
+		96FB98C8D65DB9F6F1213D31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SelabInventoryHelperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D123320B437085D9BED30EE4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -780,7 +780,7 @@
 		};
 		CC58CF85266B8101001D49CC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E57E99CE48D16CDF10A24D7A /* Pods-SelabInventoryHelper.debug.xcconfig */;
+			baseConfigurationReference = BC3A1F83D5D1B177A8F0AE0D /* Pods-SelabInventoryHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -788,7 +788,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SelabInventoryHelper/Preview Content\"";
 				DEVELOPMENT_TEAM = MCWR959BM5;
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = SelabInventoryHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -804,7 +804,7 @@
 		};
 		CC58CF86266B8101001D49CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 279A910C1037879558597D2B /* Pods-SelabInventoryHelper.release.xcconfig */;
+			baseConfigurationReference = 23C3CFBF6B5B221C1A7B8254 /* Pods-SelabInventoryHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -812,7 +812,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SelabInventoryHelper/Preview Content\"";
 				DEVELOPMENT_TEAM = MCWR959BM5;
 				ENABLE_PREVIEWS = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = SelabInventoryHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -828,7 +828,7 @@
 		};
 		CC58CF88266B8101001D49CC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BE323931D29565BD78BCE6E /* Pods-SelabInventoryHelperTests.debug.xcconfig */;
+			baseConfigurationReference = 8DB0B6D6874E4569BC9AA9D0 /* Pods-SelabInventoryHelperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -850,7 +850,7 @@
 		};
 		CC58CF89266B8101001D49CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6A600C3AB65478DD2DA8B0E /* Pods-SelabInventoryHelperTests.release.xcconfig */;
+			baseConfigurationReference = 158EFAAF2856CB1CD7DFD7AD /* Pods-SelabInventoryHelperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -872,7 +872,7 @@
 		};
 		CC58CF8B266B8101001D49CC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AA00FCFF9BB4CF633A22AF6 /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig */;
+			baseConfigurationReference = 4451DB4E8AF7022CEBB6336C /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -893,7 +893,7 @@
 		};
 		CC58CF8C266B8101001D49CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43CE9B2CE42F2F22204BFFCC /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig */;
+			baseConfigurationReference = 05044AAF7EB92FAF255CB8FA /* Pods-SelabInventoryHelper-SelabInventoryHelperUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

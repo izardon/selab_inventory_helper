@@ -37,5 +37,10 @@ extension ListProperty {
                 // do nothing
             }
         }
+        
+        func reloadPropertiesArray() {
+            self.properties.append(Property())
+            self.properties.remove(at: self.properties.count - 1)
+        }
     }
 }

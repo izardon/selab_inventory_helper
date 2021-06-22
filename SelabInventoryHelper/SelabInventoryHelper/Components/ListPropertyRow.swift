@@ -61,6 +61,7 @@ struct ListPropertyRow: View {
                                     primaryButton: .destructive(Text("確定")) {
                                         property.isScrapped = false
                                         viewModel.updateProperty(property: property)
+                                        viewModel.reloadPropertiesArray()
                                         print("tray.and.arrow.up...")
                                     },
                                     secondaryButton: .cancel(Text("取消"))
@@ -87,6 +88,7 @@ struct ListPropertyRow: View {
                                     primaryButton: .destructive(Text("報廢")) {
                                         property.isScrapped = true
                                         viewModel.updateProperty(property: property)
+                                        viewModel.reloadPropertiesArray()
                                         print("Archivebox...")
                                     },
                                     secondaryButton: .cancel(Text("取消"))
@@ -117,7 +119,7 @@ struct ListPropertyRow: View {
                         Spacer()
                     }
                 }
-            }            
+            }
         }
     }
 }

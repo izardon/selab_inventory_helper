@@ -38,9 +38,7 @@ struct ListProperty: View {
                     }
                 }
                 .onAppear(perform: {
-                    if self.viewModel.properties.isEmpty {
-                        self.viewModel.loadProperties()
-                    }
+                    self.viewModel.loadProperties()
                 })
                 .listStyle(GroupedListStyle())
                 
