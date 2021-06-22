@@ -8,8 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-
 struct ListPropertyRow: View {
     @ObservedObject var viewModel: ListProperty.ViewModel
     @ObservedObject var property: Property
@@ -36,9 +34,10 @@ struct ListPropertyRow: View {
                 }
                 
                 VStack(alignment: .leading) {
-                    Text(property.name)
-                        .font(.title2)
                     Text(property.identify)
+                        .font(.body)
+                        .foregroundColor(Color.green)
+                    Text(property.name)
                         .font(.body)
                     Text(property.location)
                         .font(.body)
