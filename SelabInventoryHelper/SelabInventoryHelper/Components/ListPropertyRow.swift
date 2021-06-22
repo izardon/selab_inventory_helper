@@ -16,9 +16,12 @@ struct ListPropertyRow: View {
     @State public var isScrapped: Bool
     @State private var showingScrapAlert = false
     @State private var showingTrashAlert = false
+    @State var firstPushed: Bool = false
     
     var body: some View {
-        NavigationLink(destination: PropertyDetail(property: property)) {
+        NavigationLink(destination: PropertyDetail(property: property, firstPushed: self.$firstPushed),
+                       isActive: Binding<Bool>(get: { firstPushed }, set: { firstPushed = $0; print("firstPushed: \(firstPushed)") })
+        ) {
             HStack {
                 if (property.images.count < 1) {
                     Image(systemName: "photo")

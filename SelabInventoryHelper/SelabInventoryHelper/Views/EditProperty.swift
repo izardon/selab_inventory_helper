@@ -20,6 +20,18 @@ struct EditProperty: View {
     @State private var showingSaveAlert: Bool = false
     @State private var isShowingImagePicker: Bool = false
     @State private var inputImage: UIImage?
+    @Binding var firstPushed: Bool
+    @Binding var secondPushed: Bool
+    
+    var btnBack : some View {
+        Button(
+            "Back",
+            action: {
+                self.firstPushed = false
+                self.secondPushed = false
+            }
+        )
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -130,6 +142,8 @@ struct EditProperty: View {
         }
         .navigationTitle("Edit")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: btnBack)
         .sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage, content: {
             ImagePicker(image: self.$inputImage)
         })

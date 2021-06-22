@@ -13,12 +13,22 @@ struct PropertyDetail: View {
     
     @State private var imgIndex = 0
     @State private var isEditing = false
-//    @State private var images = [Image("testImg"), Image("testImg2")]
+    @Binding var firstPushed: Bool
+    @State var secondPushed: Bool = false
     
     var btnEdit : some View {
-        NavigationLink(destination: EditProperty(viewModel: EditProperty.ViewModel(), property: property), label: {
-            Text("Edit")
-        })
+        NavigationLink(destination: EditProperty(viewModel: EditProperty.ViewModel(), property: property, firstPushed: self.$firstPushed, secondPushed: self.$secondPushed)
+                       , isActive: Binding<Bool>(get: { firstPushed && secondPushed }, set: { secondPushed = $0; print("firstPushed && secondPushed: \(firstPushed && secondPushed)") })
+                       , label: { Text("Edit") })
+    }
+    
+    var btnBack : some View {
+        Button(
+            "Back",
+            action: {
+                self.firstPushed = false
+            }
+        )
     }
     
     var body: some View {
@@ -61,7 +71,8 @@ struct PropertyDetail: View {
             }
             .navigationTitle("View")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing: btnEdit)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: btnBack ,trailing: self.property.isScrapped ? nil : btnEdit)
         }
     }
 }
